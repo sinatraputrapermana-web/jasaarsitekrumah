@@ -648,8 +648,9 @@ function initDriftWallGallery() {
       const filterValue = btn.getAttribute('data-filter');
 
       driftCards.forEach(card => {
-        const cat = card.getAttribute('data-cat');
-        if (filterValue === 'all' || cat === filterValue) {
+        const cat = card.getAttribute('data-cat') || '';
+        const cats = cat.split(' ');
+        if (filterValue === 'all' || cats.includes(filterValue) || cat === filterValue) {
           card.classList.remove('dimmed');
         } else {
           card.classList.add('dimmed');
@@ -762,9 +763,90 @@ function initProcessBookDeck() {
 }
 
 /* =========================================
+   ABOUT IMAGE SLIDER (3s Interval)
+   ========================================= */
+function initAboutSlider() {
+  const sliders = qsa('.about-image-wrap');
+  if (!sliders.length) return;
+
+  sliders.forEach(slider => {
+    const slides = qsa('.about-slide', slider);
+    const dots   = qsa('.about-dot', slider);
+    if (slides.length <= 1) return;
+
+    let currentIdx = 0;
+    let timer = null;
+    let isHovered = false;
+
+    function showSlide(index) {
+      currentIdx = (index + slides.length) % slides.length;
+
+      slides.forEach((s, idx) => {
+        s.classList.toggle('active', idx === currentIdx);
+      });
+
+      dots.forEach((d, idx) => {
+        d.classList.toggle('active', idx === currentIdx);
+      });
+    }
+
+    function nextSlide() {
+      showSlide(currentIdx + 1);
+    }
+
+    function startTimer() {
+      stopTimer();
+      timer = setInterval(() => {
+        if (!isHovered && !document.hidden) {
+          nextSlide();
+        }
+      }, 3000);
+    }
+
+    function stopTimer() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    dots.forEach((dot, idx) => {
+      dot.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showSlide(idx);
+        startTimer();
+      });
+    });
+
+    const card = slider.closest('.about-electric-card') || slider;
+    card.addEventListener('mouseenter', () => {
+      isHovered = true;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      isHovered = false;
+      startTimer();
+    });
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        stopTimer();
+      } else {
+        startTimer();
+      }
+    });
+
+    startTimer();
+  });
+}
+
+/* =========================================
    INIT ON DOM READY
    ========================================= */
 document.addEventListener('DOMContentLoaded', () => {
+  // Init About Image Slider
+  initAboutSlider();
+
   // Init Services 3D Depth Carousel
   initDepthCarousel();
 
@@ -782,3 +864,4 @@ document.addEventListener('DOMContentLoaded', () => {
     if (ans) ans.style.maxHeight = ans.scrollHeight + 'px';
   }
 });
+

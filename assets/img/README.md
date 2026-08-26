@@ -1,5 +1,6 @@
 # Folder untuk menyimpan gambar website
-# Salin file berikut ke folder ini:
+# File gambar yang digunakan:
+# - logo-arsitek-rumah.webp (logo brand website)
 # - hero-house.jpg  (gambar hero section)
 # - gallery-minimalis.jpg  (galeri rumah minimalis)
 # - gallery-modern.jpg  (galeri rumah modern)

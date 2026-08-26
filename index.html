@@ -32,6 +32,10 @@
     content="Desain rumah minimalis, modern, tropis, 3D visualisasi, gambar kerja DED, dan konsultasi gratis via WhatsApp." />
   <meta name="twitter:image" content="https://jasaarsitekrumah.web.id/assets/img/hero-house.jpg" />
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/img/logo-arsitek-rumah.webp" />
+  <link rel="apple-touch-icon" href="assets/img/logo-arsitek-rumah.webp" />
+
   <!-- Bootstrap 5 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
   <!-- Bootstrap Icons -->
@@ -49,7 +53,7 @@
         "@id": "https://jasaarsitekrumah.web.id/#organization",
         "name": "Jasa Arsitek Rumah",
         "url": "https://jasaarsitekrumah.web.id",
-        "logo": "https://jasaarsitekrumah.web.id/assets/img/logo.png",
+        "logo": "https://jasaarsitekrumah.web.id/assets/img/logo-arsitek-rumah.webp",
         "description": "Jasa arsitek rumah profesional melayani desain rumah minimalis, modern, tropis, gambar kerja DED, 3D visualisasi, RAB, desain interior, renovasi, dan pengawasan pembangunan.",
         "telephone": "+6288989643555",
         "contactPoint": {
@@ -119,11 +123,11 @@
 
         <!-- Brand -->
         <a href="index.html" class="navbar-brand text-decoration-none" aria-label="Jasa Arsitek Rumah - Beranda">
-          <div class="navbar-brand-text">
-            <i class="bi bi-building me-1" style="color: var(--clr-accent); font-size: 1.25rem;"></i>
-            Jasa <span>Arsitek</span> Rumah
+          <img src="assets/img/logo-arsitek-rumah.webp" alt="Logo Jasa Arsitek Rumah" class="navbar-brand-logo" width="40" height="40" />
+          <div>
+            <div class="navbar-brand-text">Jasa <span>Arsitek</span> Rumah</div>
+            <div class="navbar-brand-sub">jasaarsitekrumah.web.id</div>
           </div>
-          <div class="navbar-brand-sub">jasaarsitekrumah.web.id</div>
         </a>
 
         <!-- Desktop Nav -->
@@ -468,20 +472,43 @@
       <div class="container">
         <div class="row align-items-center g-5">
 
-          <!-- Image -->
-          <div class="col-lg-5 reveal from-left">
-            <div class="about-image-wrap">
-              <img src="assets/img/gallery-minimalis.jpg"
-                alt="Tim arsitek profesional Jasa Arsitek Rumah sedang merancang desain" loading="lazy" />
-              <div class="about-badge">
-                <span class="about-badge-val">100+</span>
-                <span class="about-badge-label">Proyek Selesai</span>
+          <!-- Image Slideshow with Electric Card Animation -->
+          <div class="col-lg-6 reveal from-left">
+            <div class="electric-border-card about-electric-card">
+              <div class="electric-border-glow"></div>
+              <div class="electric-border-beam"></div>
+              <div class="about-image-wrap" id="aboutSlider" aria-roledescription="carousel" aria-label="Foto Studio & Proyek Arsitek">
+                <div class="about-slide active">
+                  <img src="assets/img/tentang/Studio-Arsitektur-dan-Meja-Konsep.webp"
+                    alt="Studio Arsitektur dan Meja Konsep Desain - Jasa Arsitek Rumah" loading="lazy" />
+                </div>
+                <div class="about-slide">
+                  <img src="assets/img/tentang/Workspace-Desain-dengan-Monitor-3D-dan-Miniatur-Maket.webp"
+                    alt="Workspace Desain dengan Monitor 3D dan Miniatur Maket - Jasa Arsitek Rumah" loading="lazy" />
+                </div>
+                <div class="about-slide">
+                  <img src="assets/img/tentang/Peralatan-Kerja-dan-Helm-Proyek-di-Meja-Konstruksi.webp"
+                    alt="Peralatan Kerja dan Helm Proyek di Meja Konstruksi - Jasa Arsitek Rumah" loading="lazy" />
+                </div>
+
+                <!-- Indicators (Slide Dots) -->
+                <div class="about-slider-dots">
+                  <button class="about-dot active" data-slide="0" aria-label="Slide 1 - Studio Arsitektur"></button>
+                  <button class="about-dot" data-slide="1" aria-label="Slide 2 - Workspace Desain 3D"></button>
+                  <button class="about-dot" data-slide="2" aria-label="Slide 3 - Peralatan Proyek & Konstruksi"></button>
+                </div>
+
+                <!-- Decorative Badge Overlay -->
+                <div class="about-slider-badge">
+                  <i class="bi bi-shield-check"></i>
+                  <span>Studio & Lapangan Profesional</span>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Content -->
-          <div class="col-lg-7 reveal from-right">
+          <div class="col-lg-6 reveal from-right">
             <div class="eyebrow">Tentang Kami</div>
             <h2 class="section-title" id="aboutTitle">
               Arsitek Terpercaya untuk <span>Rumah Impian</span> Anda
@@ -758,7 +785,7 @@
           <div class="col-lg-5 reveal from-left">
             <div class="eyebrow">Mengapa Kami</div>
             <h2 class="section-title" id="valueTitle">
-              Alasan Klien <span>Mempercayai</span> Kami
+              Alasan Klien Mempercayai Kami
             </h2>
             <p class="section-desc">
               Komitmen kami terhadap kualitas desain, transparansi proses, dan kepuasan
@@ -857,9 +884,8 @@
           <div class="drift-wall-row drift-row-1">
             <div class="drift-track">
               <!-- Set 1 -->
-              <div class="drift-card" data-cat="modern">
-                <img src="assets/img/gallery-modern.jpg" alt="Villa Modern Tropis" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-                <div class="drift-placeholder" style="display:none;background:linear-gradient(135deg,#1a1a2e,#16213e);"><i class="bi bi-building-up"></i></div>
+              <div class="drift-card" data-cat="modern tropis">
+                <img src="assets/img/galeri/Villa-Modern-Tropis-(Bali).webp" alt="Villa Modern Tropis" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Rumah Modern</span>
                   <div class="drift-title">Villa Modern Tropis</div>
@@ -868,8 +894,7 @@
               </div>
 
               <div class="drift-card" data-cat="minimalis">
-                <img src="assets/img/gallery-minimalis.jpg" alt="Rumah Minimalis Modern" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-                <div class="drift-placeholder" style="display:none;background:linear-gradient(135deg,#16213e,#1e3a5c);"><i class="bi bi-grid-1x2"></i></div>
+                <img src="assets/img/galeri/Rumah-Minimalis-2-Lantai-(Tangerang).webp" alt="Rumah Minimalis 2 Lantai" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Rumah Minimalis</span>
                   <div class="drift-title">Rumah Minimalis 2 Lantai</div>
@@ -878,7 +903,7 @@
               </div>
 
               <div class="drift-card" data-cat="tropis">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#1e3a2e,#2d4a3e);"><i class="bi bi-tree"></i></div>
+                <img src="assets/img/galeri/Villa-Tropis-Natural-(Bogor).webp" alt="Villa Tropis Natural" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Rumah Tropis</span>
                   <div class="drift-title">Villa Tropis Natural</div>
@@ -887,7 +912,7 @@
               </div>
 
               <div class="drift-card" data-cat="interior">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#2d3748,#3a4a5c);"><i class="bi bi-lamp"></i></div>
+                <img src="assets/img/galeri/Living-Room-Scandinavian-(Surabaya).webp" alt="Living Room Scandinavian" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Interior</span>
                   <div class="drift-title">Living Room Scandinavian</div>
@@ -896,7 +921,7 @@
               </div>
 
               <div class="drift-card" data-cat="renovasi">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#3a2e1e,#4a3e2d);"><i class="bi bi-hammer"></i></div>
+                <img src="assets/img/galeri/Renovasi-Total-Rumah-Lama-(Bandung).webp" alt="Renovasi Total Rumah Lama" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Renovasi</span>
                   <div class="drift-title">Renovasi Total Rumah Lama</div>
@@ -905,7 +930,7 @@
               </div>
 
               <div class="drift-card" data-cat="modern">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#1f1c2c,#928dab);"><i class="bi bi-building"></i></div>
+                <img src="assets/img/galeri/Fasad-Kontemporer-Urban-(Jakarta-Selatan).webp" alt="Fasad Kontemporer Urban" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Rumah Modern</span>
                   <div class="drift-title">Fasad Kontemporer Urban</div>
@@ -914,9 +939,8 @@
               </div>
 
               <!-- Set 1 Duplicate for Infinite Loop -->
-              <div class="drift-card" data-cat="modern" aria-hidden="true">
-                <img src="assets/img/gallery-modern.jpg" alt="Villa Modern Tropis" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-                <div class="drift-placeholder" style="display:none;background:linear-gradient(135deg,#1a1a2e,#16213e);"><i class="bi bi-building-up"></i></div>
+              <div class="drift-card" data-cat="modern tropis" aria-hidden="true">
+                <img src="assets/img/galeri/Villa-Modern-Tropis-(Bali).webp" alt="Villa Modern Tropis" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Rumah Modern</span>
                   <div class="drift-title">Villa Modern Tropis</div>
@@ -925,8 +949,7 @@
               </div>
 
               <div class="drift-card" data-cat="minimalis" aria-hidden="true">
-                <img src="assets/img/gallery-minimalis.jpg" alt="Rumah Minimalis Modern" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-                <div class="drift-placeholder" style="display:none;background:linear-gradient(135deg,#16213e,#1e3a5c);"><i class="bi bi-grid-1x2"></i></div>
+                <img src="assets/img/galeri/Rumah-Minimalis-2-Lantai-(Tangerang).webp" alt="Rumah Minimalis 2 Lantai" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Rumah Minimalis</span>
                   <div class="drift-title">Rumah Minimalis 2 Lantai</div>
@@ -935,7 +958,7 @@
               </div>
 
               <div class="drift-card" data-cat="tropis" aria-hidden="true">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#1e3a2e,#2d4a3e);"><i class="bi bi-tree"></i></div>
+                <img src="assets/img/galeri/Villa-Tropis-Natural-(Bogor).webp" alt="Villa Tropis Natural" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Rumah Tropis</span>
                   <div class="drift-title">Villa Tropis Natural</div>
@@ -944,7 +967,7 @@
               </div>
 
               <div class="drift-card" data-cat="interior" aria-hidden="true">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#2d3748,#3a4a5c);"><i class="bi bi-lamp"></i></div>
+                <img src="assets/img/galeri/Living-Room-Scandinavian-(Surabaya).webp" alt="Living Room Scandinavian" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Interior</span>
                   <div class="drift-title">Living Room Scandinavian</div>
@@ -953,7 +976,7 @@
               </div>
 
               <div class="drift-card" data-cat="renovasi" aria-hidden="true">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#3a2e1e,#4a3e2d);"><i class="bi bi-hammer"></i></div>
+                <img src="assets/img/galeri/Renovasi-Total-Rumah-Lama-(Bandung).webp" alt="Renovasi Total Rumah Lama" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Renovasi</span>
                   <div class="drift-title">Renovasi Total Rumah Lama</div>
@@ -962,7 +985,7 @@
               </div>
 
               <div class="drift-card" data-cat="modern" aria-hidden="true">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#1f1c2c,#928dab);"><i class="bi bi-building"></i></div>
+                <img src="assets/img/galeri/Fasad-Kontemporer-Urban-(Jakarta-Selatan).webp" alt="Fasad Kontemporer Urban" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Rumah Modern</span>
                   <div class="drift-title">Fasad Kontemporer Urban</div>
@@ -977,7 +1000,7 @@
             <div class="drift-track">
               <!-- Set 2 -->
               <div class="drift-card" data-cat="minimalis">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#232526,#414345);"><i class="bi bi-house"></i></div>
+                <img src="assets/img/galeri/Compact-House-6x12-(Bekasi).webp" alt="Compact House 6x12" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Rumah Minimalis</span>
                   <div class="drift-title">Compact House 6x12</div>
@@ -986,7 +1009,7 @@
               </div>
 
               <div class="drift-card" data-cat="modern">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#0f2027,#203a43);"><i class="bi bi-building-check"></i></div>
+                <img src="assets/img/galeri/Rumah-Hook-Mewah-Modern-(Semarang).webp" alt="Rumah Hook Mewah Modern" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Rumah Modern</span>
                   <div class="drift-title">Rumah Hook Mewah Modern</div>
@@ -995,7 +1018,7 @@
               </div>
 
               <div class="drift-card" data-cat="interior">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#141e30,#243b55);"><i class="bi bi-cup-hot"></i></div>
+                <img src="assets/img/galeri/Kitchen-dan-Dining-Ambiance-(Yogyakarta).webp" alt="Kitchen & Dining Ambiance" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Interior</span>
                   <div class="drift-title">Kitchen & Dining Ambiance</div>
@@ -1004,7 +1027,7 @@
               </div>
 
               <div class="drift-card" data-cat="tropis">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#134e5e,#71b280);"><i class="bi bi-sun"></i></div>
+                <img src="assets/img/galeri/Rumah-Tropis-Bukaan-Kaca-(Malang).webp" alt="Rumah Tropis Bukaan Kaca" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Rumah Tropis</span>
                   <div class="drift-title">Rumah Tropis Bukaan Kaca</div>
@@ -1013,7 +1036,7 @@
               </div>
 
               <div class="drift-card" data-cat="renovasi">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#4b1248,#f0c27b);"><i class="bi bi-tools"></i></div>
+                <img src="assets/img/galeri/Renovasi-Tambah-Lantai-2-(Depok).webp" alt="Renovasi Tambah Lantai 2" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Renovasi</span>
                   <div class="drift-title">Renovasi Tambah Lantai 2</div>
@@ -1022,7 +1045,7 @@
               </div>
 
               <div class="drift-card" data-cat="interior">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#2c3e50,#3498db);"><i class="bi bi-moon-stars"></i></div>
+                <img src="assets/img/galeri/Master-Bedroom-Minimalis-(Denpasar).webp" alt="Master Bedroom Minimalis" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Interior</span>
                   <div class="drift-title">Master Bedroom Minimalis</div>
@@ -1032,7 +1055,7 @@
 
               <!-- Set 2 Duplicate for Infinite Loop -->
               <div class="drift-card" data-cat="minimalis" aria-hidden="true">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#232526,#414345);"><i class="bi bi-house"></i></div>
+                <img src="assets/img/galeri/Compact-House-6x12-(Bekasi).webp" alt="Compact House 6x12" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Rumah Minimalis</span>
                   <div class="drift-title">Compact House 6x12</div>
@@ -1041,7 +1064,7 @@
               </div>
 
               <div class="drift-card" data-cat="modern" aria-hidden="true">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#0f2027,#203a43);"><i class="bi bi-building-check"></i></div>
+                <img src="assets/img/galeri/Rumah-Hook-Mewah-Modern-(Semarang).webp" alt="Rumah Hook Mewah Modern" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Rumah Modern</span>
                   <div class="drift-title">Rumah Hook Mewah Modern</div>
@@ -1050,7 +1073,7 @@
               </div>
 
               <div class="drift-card" data-cat="interior" aria-hidden="true">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#141e30,#243b55);"><i class="bi bi-cup-hot"></i></div>
+                <img src="assets/img/galeri/Kitchen-dan-Dining-Ambiance-(Yogyakarta).webp" alt="Kitchen & Dining Ambiance" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Interior</span>
                   <div class="drift-title">Kitchen & Dining Ambiance</div>
@@ -1059,7 +1082,7 @@
               </div>
 
               <div class="drift-card" data-cat="tropis" aria-hidden="true">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#134e5e,#71b280);"><i class="bi bi-sun"></i></div>
+                <img src="assets/img/galeri/Rumah-Tropis-Bukaan-Kaca-(Malang).webp" alt="Rumah Tropis Bukaan Kaca" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Rumah Tropis</span>
                   <div class="drift-title">Rumah Tropis Bukaan Kaca</div>
@@ -1068,7 +1091,7 @@
               </div>
 
               <div class="drift-card" data-cat="renovasi" aria-hidden="true">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#4b1248,#f0c27b);"><i class="bi bi-tools"></i></div>
+                <img src="assets/img/galeri/Renovasi-Tambah-Lantai-2-(Depok).webp" alt="Renovasi Tambah Lantai 2" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Renovasi</span>
                   <div class="drift-title">Renovasi Tambah Lantai 2</div>
@@ -1077,7 +1100,7 @@
               </div>
 
               <div class="drift-card" data-cat="interior" aria-hidden="true">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#2c3e50,#3498db);"><i class="bi bi-moon-stars"></i></div>
+                <img src="assets/img/galeri/Master-Bedroom-Minimalis-(Denpasar).webp" alt="Master Bedroom Minimalis" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Interior</span>
                   <div class="drift-title">Master Bedroom Minimalis</div>
@@ -1092,111 +1115,111 @@
             <div class="drift-track">
               <!-- Set 3 -->
               <div class="drift-card" data-cat="tropis">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#2b5876,#4e4376);"><i class="bi bi-water"></i></div>
+                <img src="assets/img/galeri/Rumah-Tropis-Bukaan-Kaca-(Malang).webp" alt="Rumah Tropis Bukaan Kaca" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Rumah Tropis</span>
-                  <div class="drift-title">Rumah Tropis Rooftop</div>
-                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Jakarta Barat, DKI</div>
+                  <div class="drift-title">Rumah Tropis Bukaan Kaca</div>
+                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Malang, Jawa Timur</div>
                 </div>
               </div>
 
               <div class="drift-card" data-cat="modern">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#1f4037,#99f2c8);"><i class="bi bi-boxes"></i></div>
+                <img src="assets/img/galeri/Fasad-Kontemporer-Urban-(Jakarta-Selatan).webp" alt="Fasad Kontemporer Urban" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Rumah Modern</span>
-                  <div class="drift-title">Fasad Industrial Modern</div>
-                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Solo, Jawa Tengah</div>
+                  <div class="drift-title">Fasad Kontemporer Urban</div>
+                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Jakarta Selatan, DKI</div>
                 </div>
               </div>
 
               <div class="drift-card" data-cat="minimalis">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#360033,#0b8793);"><i class="bi bi-layers-half"></i></div>
+                <img src="assets/img/galeri/Compact-House-6x12-(Bekasi).webp" alt="Compact House 6x12" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Rumah Minimalis</span>
-                  <div class="drift-title">Rumah Minimalis Split Level</div>
-                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Bandung, Jawa Barat</div>
+                  <div class="drift-title">Compact House 6x12</div>
+                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Bekasi, Jawa Barat</div>
                 </div>
               </div>
 
               <div class="drift-card" data-cat="interior">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#302b63,#24243e);"><i class="bi bi-palette"></i></div>
+                <img src="assets/img/galeri/Master-Bedroom-Minimalis-(Denpasar).webp" alt="Master Bedroom Minimalis" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Interior</span>
-                  <div class="drift-title">Kamar Tidur Estetis</div>
-                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Surabaya, Jawa Timur</div>
+                  <div class="drift-title">Master Bedroom Minimalis</div>
+                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Denpasar, Bali</div>
                 </div>
               </div>
 
-              <div class="drift-card" data-cat="tropis">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#000428,#004e92);"><i class="bi bi-brightness-high"></i></div>
+              <div class="drift-card" data-cat="modern tropis">
+                <img src="assets/img/galeri/Villa-Modern-Tropis-(Bali).webp" alt="Villa Modern Tropis" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Rumah Tropis</span>
-                  <div class="drift-title">Villa Kolam Renang Private</div>
-                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Lombok, NTB</div>
+                  <div class="drift-title">Villa Modern Tropis</div>
+                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Bali, Indonesia</div>
                 </div>
               </div>
 
               <div class="drift-card" data-cat="renovasi">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#16222a,#3a6073);"><i class="bi bi-paint-bucket"></i></div>
+                <img src="assets/img/galeri/Renovasi-Tambah-Lantai-2-(Depok).webp" alt="Renovasi Tambah Lantai 2" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Renovasi</span>
-                  <div class="drift-title">Renovasi Fasad Depan Modern</div>
-                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Tangerang Selatan</div>
+                  <div class="drift-title">Renovasi Tambah Lantai 2</div>
+                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Depok, Jawa Barat</div>
                 </div>
               </div>
 
               <!-- Set 3 Duplicate for Infinite Loop -->
               <div class="drift-card" data-cat="tropis" aria-hidden="true">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#2b5876,#4e4376);"><i class="bi bi-water"></i></div>
+                <img src="assets/img/galeri/Rumah-Tropis-Bukaan-Kaca-(Malang).webp" alt="Rumah Tropis Bukaan Kaca" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Rumah Tropis</span>
-                  <div class="drift-title">Rumah Tropis Rooftop</div>
-                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Jakarta Barat, DKI</div>
+                  <div class="drift-title">Rumah Tropis Bukaan Kaca</div>
+                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Malang, Jawa Timur</div>
                 </div>
               </div>
 
               <div class="drift-card" data-cat="modern" aria-hidden="true">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#1f4037,#99f2c8);"><i class="bi bi-boxes"></i></div>
+                <img src="assets/img/galeri/Fasad-Kontemporer-Urban-(Jakarta-Selatan).webp" alt="Fasad Kontemporer Urban" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Rumah Modern</span>
-                  <div class="drift-title">Fasad Industrial Modern</div>
-                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Solo, Jawa Tengah</div>
+                  <div class="drift-title">Fasad Kontemporer Urban</div>
+                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Jakarta Selatan, DKI</div>
                 </div>
               </div>
 
               <div class="drift-card" data-cat="minimalis" aria-hidden="true">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#360033,#0b8793);"><i class="bi bi-layers-half"></i></div>
+                <img src="assets/img/galeri/Compact-House-6x12-(Bekasi).webp" alt="Compact House 6x12" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Rumah Minimalis</span>
-                  <div class="drift-title">Rumah Minimalis Split Level</div>
-                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Bandung, Jawa Barat</div>
+                  <div class="drift-title">Compact House 6x12</div>
+                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Bekasi, Jawa Barat</div>
                 </div>
               </div>
 
               <div class="drift-card" data-cat="interior" aria-hidden="true">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#302b63,#24243e);"><i class="bi bi-palette"></i></div>
+                <img src="assets/img/galeri/Master-Bedroom-Minimalis-(Denpasar).webp" alt="Master Bedroom Minimalis" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Interior</span>
-                  <div class="drift-title">Kamar Tidur Estetis</div>
-                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Surabaya, Jawa Timur</div>
+                  <div class="drift-title">Master Bedroom Minimalis</div>
+                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Denpasar, Bali</div>
                 </div>
               </div>
 
-              <div class="drift-card" data-cat="tropis" aria-hidden="true">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#000428,#004e92);"><i class="bi bi-brightness-high"></i></div>
+              <div class="drift-card" data-cat="modern tropis" aria-hidden="true">
+                <img src="assets/img/galeri/Villa-Modern-Tropis-(Bali).webp" alt="Villa Modern Tropis" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Rumah Tropis</span>
-                  <div class="drift-title">Villa Kolam Renang Private</div>
-                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Lombok, NTB</div>
+                  <div class="drift-title">Villa Modern Tropis</div>
+                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Bali, Indonesia</div>
                 </div>
               </div>
 
               <div class="drift-card" data-cat="renovasi" aria-hidden="true">
-                <div class="drift-placeholder" style="background:linear-gradient(135deg,#16222a,#3a6073);"><i class="bi bi-paint-bucket"></i></div>
+                <img src="assets/img/galeri/Renovasi-Tambah-Lantai-2-(Depok).webp" alt="Renovasi Tambah Lantai 2" loading="lazy" />
                 <div class="drift-overlay">
                   <span class="drift-cat">Renovasi</span>
-                  <div class="drift-title">Renovasi Fasad Depan Modern</div>
-                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Tangerang Selatan</div>
+                  <div class="drift-title">Renovasi Tambah Lantai 2</div>
+                  <div class="drift-location"><i class="bi bi-geo-alt"></i> Depok, Jawa Barat</div>
                 </div>
               </div>
             </div>
@@ -1707,9 +1730,8 @@
               <div class="electric-border-beam"></div>
               <article class="electric-card-inner" itemscope itemtype="https://schema.org/BlogPosting">
                 <div class="blog-img-wrap">
-                  <div class="blog-img-placeholder" style="background:linear-gradient(135deg,#1a1a2e,#2d3748);">
-                    <i class="bi bi-house-door"></i>
-                  </div>
+                  <img src="assets/img/blog/7-Inspirasi-Desain-Rumah-Minimalis-Modern-untuk-Lahan-Terbatas.webp"
+                    alt="7 Inspirasi Desain Rumah Minimalis Modern untuk Lahan Terbatas" loading="lazy" />
                   <span class="blog-cat">Inspirasi Desain</span>
                 </div>
                 <div class="blog-body">
@@ -1737,9 +1759,8 @@
               <div class="electric-border-beam"></div>
               <article class="electric-card-inner" itemscope itemtype="https://schema.org/BlogPosting">
                 <div class="blog-img-wrap">
-                  <div class="blog-img-placeholder" style="background:linear-gradient(135deg,#16213e,#1e3a5c);">
-                    <i class="bi bi-file-earmark-ruled"></i>
-                  </div>
+                  <img src="assets/img/blog/Mengapa-Gambar-Kerja-DED-Sangat-Penting-Sebelum-Membangun-Rumah.webp"
+                    alt="Mengapa Gambar Kerja DED Sangat Penting Sebelum Membangun Rumah?" loading="lazy" />
                   <span class="blog-cat">Tips Membangun</span>
                 </div>
                 <div class="blog-body">
@@ -1767,9 +1788,8 @@
               <div class="electric-border-beam"></div>
               <article class="electric-card-inner" itemscope itemtype="https://schema.org/BlogPosting">
                 <div class="blog-img-wrap">
-                  <div class="blog-img-placeholder" style="background:linear-gradient(135deg,#1e2e1a,#2e4a28);">
-                    <i class="bi bi-badge-3d"></i>
-                  </div>
+                  <img src="assets/img/blog/Manfaat-Visualisasi-3D-dalam-Proses-Desain-Rumah.webp"
+                    alt="Manfaat Visualisasi 3D dalam Proses Desain Rumah" loading="lazy" />
                   <span class="blog-cat">3D Visualisasi</span>
                 </div>
                 <div class="blog-body">
@@ -1850,8 +1870,8 @@
         <div class="col-lg-4">
           <div class="footer-brand">
             <div class="footer-brand-name">
-              <i class="bi bi-building" style="color:var(--clr-accent);"></i>
-              Jasa <span>Arsitek</span> Rumah
+              <img src="assets/img/logo-arsitek-rumah.webp" alt="Logo Jasa Arsitek Rumah" class="footer-brand-logo" width="32" height="32" />
+              <span>Jasa <span>Arsitek</span> Rumah</span>
             </div>
             <p class="footer-brand-desc">
               Mitra desain arsitektur terpercaya untuk mewujudkan rumah impian Anda

@@ -45,7 +45,7 @@
   color: rgba(255, 255, 255, 0.55);
 }
 
-.breadcrumb-nav li + li::before {
+.breadcrumb-nav li+li::before {
   content: '';
   display: inline-block;
   width: 5px;
@@ -87,8 +87,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle at 15% 50%, rgba(201,168,76,0.07) 0%, transparent 45%),
-    radial-gradient(circle at 85% 30%, rgba(201,168,76,0.05) 0%, transparent 40%);
+    radial-gradient(circle at 15% 50%, rgba(201, 168, 76, 0.07) 0%, transparent 45%),
+    radial-gradient(circle at 85% 30%, rgba(201, 168, 76, 0.05) 0%, transparent 40%);
 }
 
 .page-hero-inner {
@@ -100,8 +100,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.625rem;
-  background: rgba(201,168,76,0.12);
-  border: 1px solid rgba(201,168,76,0.25);
+  background: rgba(201, 168, 76, 0.12);
+  border: 1px solid rgba(201, 168, 76, 0.25);
   border-radius: var(--radius-full);
   padding: 0.35rem 1rem;
   font-size: var(--fs-xs);
@@ -127,10 +127,56 @@
 
 .page-hero-desc {
   font-size: var(--fs-md);
-  color: rgba(255,255,255,0.68);
+  color: rgba(255, 255, 255, 0.68);
   max-width: 620px;
   line-height: 1.8;
   margin-bottom: 2rem;
+}
+
+/* ---- SERVICE FEATURED IMAGE WITH ELECTRIC CARD ANIMATION ---- */
+.service-electric-card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  padding: 3px;
+  background: rgba(201, 168, 76, 0.15);
+  box-shadow: 0 16px 45px rgba(26, 26, 46, 0.12),
+    0 0 25px rgba(201, 168, 76, 0.2);
+  margin-bottom: 2rem;
+  cursor: default;
+  height: auto !important;
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.34, 1.5, 0.64, 1),
+    box-shadow 0.45s ease;
+}
+
+.service-electric-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 55px rgba(26, 26, 46, 0.18),
+    0 0 35px rgba(201, 168, 76, 0.4),
+    0 0 20px rgba(56, 189, 248, 0.35);
+}
+
+.service-featured-image {
+  position: relative;
+  z-index: 2;
+  border-radius: calc(var(--radius-xl) - 3px);
+  overflow: hidden;
+  background: var(--clr-secondary);
+  line-height: 0;
+  display: block;
+}
+
+.service-featured-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-electric-card:hover .service-featured-image img {
+  transform: scale(1.04);
 }
 
 /* ---- BENEFIT LIST ---- */
@@ -147,7 +193,7 @@
 }
 
 .benefit-item:hover {
-  border-color: rgba(201,168,76,0.25);
+  border-color: rgba(201, 168, 76, 0.25);
   box-shadow: var(--shadow-sm);
   transform: translateX(4px);
 }
@@ -199,7 +245,7 @@
 .related-service-card:hover {
   transform: translateX(4px);
   box-shadow: var(--shadow-sm);
-  border-color: rgba(201,168,76,0.2);
+  border-color: rgba(201, 168, 76, 0.2);
   color: var(--clr-primary);
 }
 
@@ -265,11 +311,15 @@
 }
 
 @media (max-width: 991px) {
-  .gallery-masonry { columns: 2; }
+  .gallery-masonry {
+    columns: 2;
+  }
 }
 
 @media (max-width: 575px) {
-  .gallery-masonry { columns: 1; }
+  .gallery-masonry {
+    columns: 1;
+  }
 }
 
 /* ---- BLOG PAGE ---- */
@@ -291,7 +341,9 @@
   outline: none;
 }
 
-.blog-search-input:focus { border-color: var(--clr-accent); }
+.blog-search-input:focus {
+  border-color: var(--clr-accent);
+}
 
 .blog-search-icon {
   position: absolute;
@@ -408,7 +460,7 @@
 .value-block:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-md);
-  border-color: rgba(201,168,76,0.2);
+  border-color: rgba(201, 168, 76, 0.2);
 }
 
 .value-block-icon {
@@ -428,8 +480,18 @@
   color: var(--clr-primary);
 }
 
-.value-block h3 { font-size: var(--fs-base); font-weight: 700; color: var(--clr-primary); margin-bottom: 0.5rem; }
-.value-block p  { font-size: var(--fs-sm); color: var(--clr-text-light); line-height: 1.7; }
+.value-block h3 {
+  font-size: var(--fs-base);
+  font-weight: 700;
+  color: var(--clr-primary);
+  margin-bottom: 0.5rem;
+}
+
+.value-block p {
+  font-size: var(--fs-sm);
+  color: var(--clr-text-light);
+  line-height: 1.7;
+}
 
 .team-card {
   text-align: center;
@@ -444,7 +506,7 @@
 .team-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
-  border-color: rgba(201,168,76,0.2);
+  border-color: rgba(201, 168, 76, 0.2);
 }
 
 .team-avatar {
@@ -460,19 +522,35 @@
   font-weight: 700;
   color: var(--clr-primary);
   margin: 0 auto 1.25rem;
-  border: 3px solid rgba(201,168,76,0.3);
+  border: 3px solid rgba(201, 168, 76, 0.3);
 }
 
-.team-name  { font-weight: 700; font-size: var(--fs-md); color: var(--clr-primary); margin-bottom: 0.25rem; }
-.team-role  { font-size: var(--fs-sm); color: var(--clr-accent-dark); font-weight: 600; margin-bottom: 0.75rem; }
-.team-desc  { font-size: var(--fs-sm); color: var(--clr-text-light); line-height: 1.7; }
+.team-name {
+  font-weight: 700;
+  font-size: var(--fs-md);
+  color: var(--clr-primary);
+  margin-bottom: 0.25rem;
+}
+
+.team-role {
+  font-size: var(--fs-sm);
+  color: var(--clr-accent-dark);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.team-desc {
+  font-size: var(--fs-sm);
+  color: var(--clr-text-light);
+  line-height: 1.7;
+}
 
 /* ---- SERVICE PAGE ICON HERO ---- */
 .service-icon-hero {
   width: 80px;
   height: 80px;
-  background: rgba(201,168,76,0.12);
-  border: 2px solid rgba(201,168,76,0.25);
+  background: rgba(201, 168, 76, 0.12);
+  border: 2px solid rgba(201, 168, 76, 0.25);
   border-radius: var(--radius-lg);
   display: flex;
   align-items: center;

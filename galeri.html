@@ -24,6 +24,10 @@
     ]
   }
   </script>
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/img/logo-arsitek-rumah.webp" />
+  <link rel="apple-touch-icon" href="assets/img/logo-arsitek-rumah.webp" />
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -39,9 +43,11 @@
     <div class="container">
       <div class="d-flex align-items-center justify-content-between">
         <a href="index.html" class="navbar-brand text-decoration-none" aria-label="Jasa Arsitek Rumah - Beranda">
-          <div class="navbar-brand-text"><i class="bi bi-building me-1"
-              style="color:var(--clr-accent);font-size:1.25rem;"></i>Jasa <span>Arsitek</span> Rumah</div>
-          <div class="navbar-brand-sub">jasaarsitekrumah.web.id</div>
+          <img src="assets/img/logo-arsitek-rumah.webp" alt="Logo Jasa Arsitek Rumah" class="navbar-brand-logo" width="40" height="40" />
+          <div>
+            <div class="navbar-brand-text">Jasa <span>Arsitek</span> Rumah</div>
+            <div class="navbar-brand-sub">jasaarsitekrumah.web.id</div>
+          </div>
         </a>
         <nav class="nav-links-desktop d-flex align-items-center gap-1" aria-label="Navigasi utama">
           <a href="index.html" class="nav-link-custom">Beranda</a>
@@ -157,9 +163,9 @@
         <!-- Masonry Grid -->
         <div class="gallery-masonry" id="galleryMasonry">
 
-          <div class="gallery-masonry-item reveal" data-cat="modern" data-delay="0" style="aspect-ratio:4/5;">
-            <img src="assets/img/gallery-modern.jpg" alt="Villa Modern Tropis dengan kolam renang — Bali"
-              loading="lazy" />
+          <!-- 01: Villa Modern Tropis (Bali) -->
+          <div class="gallery-masonry-item reveal" data-cat="modern tropis" data-delay="0">
+            <img src="assets/img/galeri/Villa-Modern-Tropis-(Bali).webp" alt="Villa Modern Tropis — Bali" loading="lazy" width="800" height="600" />
             <div class="gallery-overlay">
               <div class="gallery-cat">Rumah Modern</div>
               <div class="gallery-project-name">Villa Modern Tropis</div>
@@ -167,49 +173,39 @@
             </div>
           </div>
 
-          <div class="gallery-masonry-item reveal" data-cat="minimalis" data-delay="50">
-            <img src="assets/img/gallery-minimalis.jpg" alt="Rumah Minimalis Modern dengan taman tropis — Tangerang"
-              loading="lazy" />
+          <!-- 02: Rumah Minimalis 2 Lantai (Tangerang) -->
+          <div class="gallery-masonry-item reveal" data-cat="minimalis 2lantai" data-delay="50">
+            <img src="assets/img/galeri/Rumah-Minimalis-2-Lantai-(Tangerang).webp" alt="Rumah Minimalis 2 Lantai — Tangerang" loading="lazy" width="800" height="600" />
             <div class="gallery-overlay">
               <div class="gallery-cat">Rumah Minimalis</div>
-              <div class="gallery-project-name">Rumah Minimalis Modern</div>
+              <div class="gallery-project-name">Rumah Minimalis 2 Lantai</div>
               <div class="gallery-location"><i class="bi bi-geo-alt"></i> Tangerang, Banten</div>
             </div>
           </div>
 
-          <!-- Placeholder items with styled backgrounds -->
-          <div class="gallery-masonry-item reveal" data-cat="modern" data-delay="100"
-            style="background:linear-gradient(135deg,#1a1a2e,#2d3748);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;">
-            <div style="text-align:center;color:rgba(201,168,76,0.45);">
-              <i class="bi bi-building" style="font-size:3rem;display:block;margin-bottom:0.5rem;"></i>
-              <span style="font-size:0.75rem;color:rgba(255,255,255,0.3);">Rumah Modern Kontemporer</span>
-            </div>
+          <!-- 03: Fasad Kontemporer Urban (Jakarta Selatan) -->
+          <div class="gallery-masonry-item reveal" data-cat="modern" data-delay="100">
+            <img src="assets/img/galeri/Fasad-Kontemporer-Urban-(Jakarta-Selatan).webp" alt="Fasad Kontemporer Urban — Jakarta Selatan" loading="lazy" width="800" height="600" />
             <div class="gallery-overlay">
               <div class="gallery-cat">Rumah Modern</div>
-              <div class="gallery-project-name">Rumah Modern Kontemporer</div>
+              <div class="gallery-project-name">Fasad Kontemporer Urban</div>
               <div class="gallery-location"><i class="bi bi-geo-alt"></i> Jakarta Selatan, DKI</div>
             </div>
           </div>
 
-          <div class="gallery-masonry-item reveal" data-cat="interior" data-delay="150"
-            style="background:linear-gradient(135deg,#2d3748,#3a4a5c);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;">
-            <div style="text-align:center;color:rgba(201,168,76,0.45);">
-              <i class="bi bi-lamp" style="font-size:3rem;display:block;margin-bottom:0.5rem;"></i>
-              <span style="font-size:0.75rem;color:rgba(255,255,255,0.3);">Interior Scandinavian</span>
-            </div>
+          <!-- 04: Living Room Scandinavian (Surabaya) -->
+          <div class="gallery-masonry-item reveal" data-cat="interior" data-delay="150">
+            <img src="assets/img/galeri/Living-Room-Scandinavian-(Surabaya).webp" alt="Living Room Scandinavian — Surabaya" loading="lazy" width="800" height="600" />
             <div class="gallery-overlay">
               <div class="gallery-cat">Interior</div>
-              <div class="gallery-project-name">Interior Modern Scandinavian</div>
+              <div class="gallery-project-name">Living Room Scandinavian</div>
               <div class="gallery-location"><i class="bi bi-geo-alt"></i> Surabaya, Jawa Timur</div>
             </div>
           </div>
 
-          <div class="gallery-masonry-item reveal" data-cat="tropis" data-delay="200"
-            style="background:linear-gradient(135deg,#1e3a2e,#2d4a3e);aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;">
-            <div style="text-align:center;color:rgba(201,168,76,0.45);">
-              <i class="bi bi-tree" style="font-size:3rem;display:block;margin-bottom:0.5rem;"></i>
-              <span style="font-size:0.75rem;color:rgba(255,255,255,0.3);">Villa Tropis Natural</span>
-            </div>
+          <!-- 05: Villa Tropis Natural (Bogor) -->
+          <div class="gallery-masonry-item reveal" data-cat="tropis" data-delay="200">
+            <img src="assets/img/galeri/Villa-Tropis-Natural-(Bogor).webp" alt="Villa Tropis Natural — Bogor" loading="lazy" width="800" height="600" />
             <div class="gallery-overlay">
               <div class="gallery-cat">Rumah Tropis</div>
               <div class="gallery-project-name">Villa Tropis Natural</div>
@@ -217,12 +213,9 @@
             </div>
           </div>
 
-          <div class="gallery-masonry-item reveal" data-cat="renovasi" data-delay="250"
-            style="background:linear-gradient(135deg,#3a2e1e,#4a3e2d);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;">
-            <div style="text-align:center;color:rgba(201,168,76,0.45);">
-              <i class="bi bi-hammer" style="font-size:3rem;display:block;margin-bottom:0.5rem;"></i>
-              <span style="font-size:0.75rem;color:rgba(255,255,255,0.3);">Renovasi Total</span>
-            </div>
+          <!-- 06: Renovasi Total Rumah Lama (Bandung) -->
+          <div class="gallery-masonry-item reveal" data-cat="renovasi" data-delay="250">
+            <img src="assets/img/galeri/Renovasi-Total-Rumah-Lama-(Bandung).webp" alt="Renovasi Total Rumah Lama — Bandung" loading="lazy" width="800" height="600" />
             <div class="gallery-overlay">
               <div class="gallery-cat">Renovasi</div>
               <div class="gallery-project-name">Renovasi Total Rumah Lama</div>
@@ -230,81 +223,63 @@
             </div>
           </div>
 
-          <div class="gallery-masonry-item reveal" data-cat="2lantai" data-delay="300"
-            style="background:linear-gradient(135deg,#1a2e3a,#2d3e4a);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;">
-            <div style="text-align:center;color:rgba(201,168,76,0.45);">
-              <i class="bi bi-buildings" style="font-size:3rem;display:block;margin-bottom:0.5rem;"></i>
-              <span style="font-size:0.75rem;color:rgba(255,255,255,0.3);">Rumah 2 Lantai</span>
-            </div>
-            <div class="gallery-overlay">
-              <div class="gallery-cat">Rumah 2 Lantai</div>
-              <div class="gallery-project-name">Hunian 2 Lantai Elegan</div>
-              <div class="gallery-location"><i class="bi bi-geo-alt"></i> Depok, Jawa Barat</div>
-            </div>
-          </div>
-
-          <div class="gallery-masonry-item reveal" data-cat="minimalis" data-delay="350"
-            style="background:linear-gradient(135deg,#2a2a1a,#3a3a2e);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;">
-            <div style="text-align:center;color:rgba(201,168,76,0.45);">
-              <i class="bi bi-house-door" style="font-size:3rem;display:block;margin-bottom:0.5rem;"></i>
-              <span style="font-size:0.75rem;color:rgba(255,255,255,0.3);">Rumah Minimalis Type 60</span>
-            </div>
+          <!-- 07: Compact House 6x12 (Bekasi) -->
+          <div class="gallery-masonry-item reveal" data-cat="minimalis 2lantai" data-delay="300">
+            <img src="assets/img/galeri/Compact-House-6x12-(Bekasi).webp" alt="Compact House 6x12 — Bekasi" loading="lazy" width="800" height="600" />
             <div class="gallery-overlay">
               <div class="gallery-cat">Rumah Minimalis</div>
-              <div class="gallery-project-name">Rumah Minimalis Type 60</div>
+              <div class="gallery-project-name">Compact House 6x12</div>
               <div class="gallery-location"><i class="bi bi-geo-alt"></i> Bekasi, Jawa Barat</div>
             </div>
           </div>
 
-          <div class="gallery-masonry-item reveal" data-cat="interior" data-delay="400"
-            style="background:linear-gradient(135deg,#1e2e3a,#2e3e4a);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;">
-            <div style="text-align:center;color:rgba(201,168,76,0.45);">
-              <i class="bi bi-cup-hot" style="font-size:3rem;display:block;margin-bottom:0.5rem;"></i>
-              <span style="font-size:0.75rem;color:rgba(255,255,255,0.3);">Dapur Modern Minimalis</span>
-            </div>
+          <!-- 08: Kitchen & Dining Ambiance (Yogyakarta) -->
+          <div class="gallery-masonry-item reveal" data-cat="interior" data-delay="350">
+            <img src="assets/img/galeri/Kitchen-dan-Dining-Ambiance-(Yogyakarta).webp" alt="Kitchen & Dining Ambiance — Yogyakarta" loading="lazy" width="800" height="600" />
             <div class="gallery-overlay">
               <div class="gallery-cat">Interior</div>
-              <div class="gallery-project-name">Dapur Modern Minimalis</div>
-              <div class="gallery-location"><i class="bi bi-geo-alt"></i> Semarang, Jawa Tengah</div>
-            </div>
-          </div>
-
-          <div class="gallery-masonry-item reveal" data-cat="modern" data-delay="450"
-            style="background:linear-gradient(135deg,#1a1e2e,#2a2e3e);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;">
-            <div style="text-align:center;color:rgba(201,168,76,0.45);">
-              <i class="bi bi-building-check" style="font-size:3rem;display:block;margin-bottom:0.5rem;"></i>
-              <span style="font-size:0.75rem;color:rgba(255,255,255,0.3);">Rumah Modern Industrial</span>
-            </div>
-            <div class="gallery-overlay">
-              <div class="gallery-cat">Rumah Modern</div>
-              <div class="gallery-project-name">Rumah Modern Industrial</div>
+              <div class="gallery-project-name">Kitchen & Dining Ambiance</div>
               <div class="gallery-location"><i class="bi bi-geo-alt"></i> Yogyakarta, DIY</div>
             </div>
           </div>
 
-          <div class="gallery-masonry-item reveal" data-cat="tropis" data-delay="500"
-            style="background:linear-gradient(135deg,#1e3025,#2e4035);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;">
-            <div style="text-align:center;color:rgba(201,168,76,0.45);">
-              <i class="bi bi-flower1" style="font-size:3rem;display:block;margin-bottom:0.5rem;"></i>
-              <span style="font-size:0.75rem;color:rgba(255,255,255,0.3);">Rumah Tropis Kontemporer</span>
+          <!-- 09: Rumah Hook Mewah Modern (Semarang) -->
+          <div class="gallery-masonry-item reveal" data-cat="modern 2lantai" data-delay="400">
+            <img src="assets/img/galeri/Rumah-Hook-Mewah-Modern-(Semarang).webp" alt="Rumah Hook Mewah Modern — Semarang" loading="lazy" width="800" height="600" />
+            <div class="gallery-overlay">
+              <div class="gallery-cat">Rumah Modern</div>
+              <div class="gallery-project-name">Rumah Hook Mewah Modern</div>
+              <div class="gallery-location"><i class="bi bi-geo-alt"></i> Semarang, Jawa Tengah</div>
             </div>
+          </div>
+
+          <!-- 10: Rumah Tropis Bukaan Kaca (Malang) -->
+          <div class="gallery-masonry-item reveal" data-cat="tropis" data-delay="450">
+            <img src="assets/img/galeri/Rumah-Tropis-Bukaan-Kaca-(Malang).webp" alt="Rumah Tropis Bukaan Kaca — Malang" loading="lazy" width="800" height="600" />
             <div class="gallery-overlay">
               <div class="gallery-cat">Rumah Tropis</div>
-              <div class="gallery-project-name">Rumah Tropis Kontemporer</div>
+              <div class="gallery-project-name">Rumah Tropis Bukaan Kaca</div>
               <div class="gallery-location"><i class="bi bi-geo-alt"></i> Malang, Jawa Timur</div>
             </div>
           </div>
 
-          <div class="gallery-masonry-item reveal" data-cat="2lantai" data-delay="550"
-            style="background:linear-gradient(135deg,#2a1e2e,#3a2e3e);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;">
-            <div style="text-align:center;color:rgba(201,168,76,0.45);">
-              <i class="bi bi-house-up" style="font-size:3rem;display:block;margin-bottom:0.5rem;"></i>
-              <span style="font-size:0.75rem;color:rgba(255,255,255,0.3);">Hunian Vertikal 2 Lantai</span>
-            </div>
+          <!-- 11: Renovasi Tambah Lantai 2 (Depok) -->
+          <div class="gallery-masonry-item reveal" data-cat="renovasi 2lantai" data-delay="500">
+            <img src="assets/img/galeri/Renovasi-Tambah-Lantai-2-(Depok).webp" alt="Renovasi Tambah Lantai 2 — Depok" loading="lazy" width="800" height="600" />
             <div class="gallery-overlay">
-              <div class="gallery-cat">Rumah 2 Lantai</div>
-              <div class="gallery-project-name">Hunian Vertikal 2 Lantai</div>
-              <div class="gallery-location"><i class="bi bi-geo-alt"></i> Medan, Sumatera Utara</div>
+              <div class="gallery-cat">Renovasi</div>
+              <div class="gallery-project-name">Renovasi Tambah Lantai 2</div>
+              <div class="gallery-location"><i class="bi bi-geo-alt"></i> Depok, Jawa Barat</div>
+            </div>
+          </div>
+
+          <!-- 12: Master Bedroom Minimalis (Denpasar) -->
+          <div class="gallery-masonry-item reveal" data-cat="interior" data-delay="550">
+            <img src="assets/img/galeri/Master-Bedroom-Minimalis-(Denpasar).webp" alt="Master Bedroom Minimalis — Denpasar" loading="lazy" width="800" height="600" />
+            <div class="gallery-overlay">
+              <div class="gallery-cat">Interior</div>
+              <div class="gallery-project-name">Master Bedroom Minimalis</div>
+              <div class="gallery-location"><i class="bi bi-geo-alt"></i> Denpasar, Bali</div>
             </div>
           </div>
 
@@ -319,8 +294,10 @@
       <div class="row g-5">
         <div class="col-lg-4">
           <div class="footer-brand">
-            <div class="footer-brand-name"><i class="bi bi-building" style="color:var(--clr-accent);"></i> Jasa
-              <span>Arsitek</span> Rumah</div>
+            <div class="footer-brand-name">
+              <img src="assets/img/logo-arsitek-rumah.webp" alt="Logo Jasa Arsitek Rumah" class="footer-brand-logo" width="32" height="32" />
+              <span>Jasa <span>Arsitek</span> Rumah</span>
+            </div>
             <p class="footer-brand-desc">Mitra desain arsitektur terpercaya untuk mewujudkan rumah impian Anda —
               profesional, personal, dan penuh perhatian pada detail.</p>
           </div>
@@ -389,8 +366,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
-    // Update gallery count
-    const galleryCatBtns = document.querySelectorAll('.filter-btn');
+    // Update gallery count and filter
+    const galleryCatBtns = document.querySelectorAll('.gallery-filter .filter-btn');
     const galleryMasonryItems = document.querySelectorAll('.gallery-masonry-item[data-cat]');
     const countEl = document.getElementById('galleryCountNum');
 
@@ -401,7 +378,9 @@
         const filter = btn.dataset.filter;
         let visible = 0;
         galleryMasonryItems.forEach(item => {
-          const show = filter === 'all' || item.dataset.cat === filter;
+          const cat = item.dataset.cat || '';
+          const cats = cat.split(' ');
+          const show = filter === 'all' || cats.includes(filter) || cat === filter;
           item.style.display = show ? '' : 'none';
           if (show) visible++;
         });

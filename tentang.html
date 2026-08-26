@@ -21,6 +21,10 @@
     ]
   }
   </script>
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/img/logo-arsitek-rumah.webp" />
+  <link rel="apple-touch-icon" href="assets/img/logo-arsitek-rumah.webp" />
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -35,8 +39,11 @@
   <div class="container">
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="navbar-brand text-decoration-none" aria-label="Jasa Arsitek Rumah - Beranda">
-        <div class="navbar-brand-text"><i class="bi bi-building me-1" style="color:var(--clr-accent);font-size:1.25rem;"></i>Jasa <span>Arsitek</span> Rumah</div>
-        <div class="navbar-brand-sub">jasaarsitekrumah.web.id</div>
+        <img src="assets/img/logo-arsitek-rumah.webp" alt="Logo Jasa Arsitek Rumah" class="navbar-brand-logo" width="40" height="40" />
+        <div>
+          <div class="navbar-brand-text">Jasa <span>Arsitek</span> Rumah</div>
+          <div class="navbar-brand-sub">jasaarsitekrumah.web.id</div>
+        </div>
       </a>
       <nav class="nav-links-desktop d-flex align-items-center gap-1" aria-label="Navigasi utama">
         <a href="index.html" class="nav-link-custom">Beranda</a>
@@ -138,10 +145,38 @@
   <section class="section-pad" aria-labelledby="siapakamTitle">
     <div class="container">
       <div class="row align-items-center g-5">
+        <!-- Image Slideshow with Electric Card Animation -->
         <div class="col-lg-6 reveal from-left">
-          <div style="position:relative;border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:4/5;">
-            <img src="assets/img/gallery-minimalis.jpg" alt="Tim Jasa Arsitek Rumah sedang merancang desain" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
-            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(26,26,46,0.5) 0%,transparent 60%);"></div>
+          <div class="electric-border-card about-electric-card">
+            <div class="electric-border-glow"></div>
+            <div class="electric-border-beam"></div>
+            <div class="about-image-wrap" id="aboutSlider" aria-roledescription="carousel" aria-label="Foto Studio & Proyek Arsitek">
+              <div class="about-slide active">
+                <img src="assets/img/tentang/Studio-Arsitektur-dan-Meja-Konsep.webp"
+                  alt="Studio Arsitektur dan Meja Konsep Desain - Jasa Arsitek Rumah" loading="lazy" />
+              </div>
+              <div class="about-slide">
+                <img src="assets/img/tentang/Workspace-Desain-dengan-Monitor-3D-dan-Miniatur-Maket.webp"
+                  alt="Workspace Desain dengan Monitor 3D dan Miniatur Maket - Jasa Arsitek Rumah" loading="lazy" />
+              </div>
+              <div class="about-slide">
+                <img src="assets/img/tentang/Peralatan-Kerja-dan-Helm-Proyek-di-Meja-Konstruksi.webp"
+                  alt="Peralatan Kerja dan Helm Proyek di Meja Konstruksi - Jasa Arsitek Rumah" loading="lazy" />
+              </div>
+
+              <!-- Indicators (Slide Dots) -->
+              <div class="about-slider-dots">
+                <button class="about-dot active" data-slide="0" aria-label="Slide 1 - Studio Arsitektur"></button>
+                <button class="about-dot" data-slide="1" aria-label="Slide 2 - Workspace Desain 3D"></button>
+                <button class="about-dot" data-slide="2" aria-label="Slide 3 - Peralatan Proyek & Konstruksi"></button>
+              </div>
+
+              <!-- Decorative Badge Overlay -->
+              <div class="about-slider-badge">
+                <i class="bi bi-shield-check"></i>
+                <span>Studio & Lapangan Profesional</span>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-lg-6 reveal from-right">
@@ -215,41 +250,159 @@
   </section>
 
   <!-- NILAI KAMI -->
-  <section class="section-pad" aria-labelledby="nilaiTitle">
+  <section class="section-pad" id="nilai-kami" aria-labelledby="nilaiTitle">
     <div class="container">
       <div class="section-header text-center">
         <div class="eyebrow">Nilai Kami</div>
         <h2 class="section-title" id="nilaiTitle">Prinsip yang <span>Memandu</span> Setiap Desain</h2>
         <p class="section-desc">Nilai-nilai ini bukan sekadar slogan — melainkan standar yang kami terapkan di setiap proyek.</p>
       </div>
-      <div class="row g-4">
-        <div class="col-sm-6 col-lg-3 reveal" data-delay="0">
-          <div class="value-block">
-            <div class="value-block-icon"><i class="bi bi-person-heart"></i></div>
-            <h3>Berpusat pada Klien</h3>
-            <p>Kebutuhan dan keinginan Anda adalah prioritas utama dalam setiap keputusan desain yang kami buat.</p>
+
+      <div class="features-marquee-wrap">
+        <div class="features-marquee-track">
+
+          <!-- Set 1 (Cards 01 - 05) -->
+          <!-- Value 1 -->
+          <div class="feature-card-item">
+            <div class="feature-card">
+              <div class="feature-num">01</div>
+              <div class="feature-icon-wrap">
+                <i class="bi bi-person-heart"></i>
+              </div>
+              <h3 class="feature-title">Berpusat pada Klien</h3>
+              <p class="feature-desc">
+                Kebutuhan dan kenyamanan Anda adalah prioritas utama. Kami merancang ruang yang personal, fungsional, dan sesuai anggaran.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="col-sm-6 col-lg-3 reveal" data-delay="100">
-          <div class="value-block">
-            <div class="value-block-icon"><i class="bi bi-award"></i></div>
-            <h3>Kualitas Tanpa Kompromi</h3>
-            <p>Kami menjaga standar kualitas tinggi di setiap aspek desain — dari konsep hingga dokumen teknis akhir.</p>
+
+          <!-- Value 2 -->
+          <div class="feature-card-item">
+            <div class="feature-card">
+              <div class="feature-num">02</div>
+              <div class="feature-icon-wrap">
+                <i class="bi bi-award"></i>
+              </div>
+              <h3 class="feature-title">Kualitas Tanpa Kompromi</h3>
+              <p class="feature-desc">
+                Menjaga standar estetika dan teknis tertinggi — mulai dari pengembangan konsep tata ruang hingga dokumen DED siap bangun.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="col-sm-6 col-lg-3 reveal" data-delay="200">
-          <div class="value-block">
-            <div class="value-block-icon"><i class="bi bi-transparency"></i></div>
-            <h3>Transparansi Penuh</h3>
-            <p>Proses desain dikomunikasikan secara terbuka — tidak ada kejutan, tidak ada biaya tersembunyi.</p>
+
+          <!-- Value 3 -->
+          <div class="feature-card-item">
+            <div class="feature-card">
+              <div class="feature-num">03</div>
+              <div class="feature-icon-wrap">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h3 class="feature-title">Transparansi Penuh</h3>
+              <p class="feature-desc">
+                Setiap tahapan proses desain, revisi, dan estimasi biaya RAB dikomunikasikan secara jujur, terbuka, dan tanpa biaya tersembunyi.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="col-sm-6 col-lg-3 reveal" data-delay="300">
-          <div class="value-block">
-            <div class="value-block-icon"><i class="bi bi-lightbulb"></i></div>
-            <h3>Inovasi Berkelanjutan</h3>
-            <p>Kami terus mengembangkan kemampuan desain dan mengikuti tren arsitektur terkini untuk menghadirkan solusi terbaik.</p>
+
+          <!-- Value 4 -->
+          <div class="feature-card-item">
+            <div class="feature-card">
+              <div class="feature-num">04</div>
+              <div class="feature-icon-wrap">
+                <i class="bi bi-lightbulb"></i>
+              </div>
+              <h3 class="feature-title">Inovasi Berkelanjutan</h3>
+              <p class="feature-desc">
+                Mengintegrasikan teknologi visualisasi 3D mutakhir dan prinsip arsitektur hijau hemat energi untuk hunian masa depan.
+              </p>
+            </div>
           </div>
+
+          <!-- Value 5 -->
+          <div class="feature-card-item">
+            <div class="feature-card">
+              <div class="feature-num">05</div>
+              <div class="feature-icon-wrap">
+                <i class="bi bi-rulers"></i>
+              </div>
+              <h3 class="feature-title">Presisi & Perhatian Detail</h3>
+              <p class="feature-desc">
+                Perhitungan akurat hingga ukuran millimeter, pencahayaan alami, dan ventilasi silang demi kenyamanan maksimal keluarga.
+              </p>
+            </div>
+          </div>
+
+          <!-- Set 2 (Duplikasi untuk Seamless Infinite Loop) -->
+          <!-- Value 1 Duplicate -->
+          <div class="feature-card-item" aria-hidden="true">
+            <div class="feature-card">
+              <div class="feature-num">01</div>
+              <div class="feature-icon-wrap">
+                <i class="bi bi-person-heart"></i>
+              </div>
+              <h3 class="feature-title">Berpusat pada Klien</h3>
+              <p class="feature-desc">
+                Kebutuhan dan kenyamanan Anda adalah prioritas utama. Kami merancang ruang yang personal, fungsional, dan sesuai anggaran.
+              </p>
+            </div>
+          </div>
+
+          <!-- Value 2 Duplicate -->
+          <div class="feature-card-item" aria-hidden="true">
+            <div class="feature-card">
+              <div class="feature-num">02</div>
+              <div class="feature-icon-wrap">
+                <i class="bi bi-award"></i>
+              </div>
+              <h3 class="feature-title">Kualitas Tanpa Kompromi</h3>
+              <p class="feature-desc">
+                Menjaga standar estetika dan teknis tertinggi — mulai dari pengembangan konsep tata ruang hingga dokumen DED siap bangun.
+              </p>
+            </div>
+          </div>
+
+          <!-- Value 3 Duplicate -->
+          <div class="feature-card-item" aria-hidden="true">
+            <div class="feature-card">
+              <div class="feature-num">03</div>
+              <div class="feature-icon-wrap">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h3 class="feature-title">Transparansi Penuh</h3>
+              <p class="feature-desc">
+                Setiap tahapan proses desain, revisi, dan estimasi biaya RAB dikomunikasikan secara jujur, terbuka, dan tanpa biaya tersembunyi.
+              </p>
+            </div>
+          </div>
+
+          <!-- Value 4 Duplicate -->
+          <div class="feature-card-item" aria-hidden="true">
+            <div class="feature-card">
+              <div class="feature-num">04</div>
+              <div class="feature-icon-wrap">
+                <i class="bi bi-lightbulb"></i>
+              </div>
+              <h3 class="feature-title">Inovasi Berkelanjutan</h3>
+              <p class="feature-desc">
+                Mengintegrasikan teknologi visualisasi 3D mutakhir dan prinsip arsitektur hijau hemat energi untuk hunian masa depan.
+              </p>
+            </div>
+          </div>
+
+          <!-- Value 5 Duplicate -->
+          <div class="feature-card-item" aria-hidden="true">
+            <div class="feature-card">
+              <div class="feature-num">05</div>
+              <div class="feature-icon-wrap">
+                <i class="bi bi-rulers"></i>
+              </div>
+              <h3 class="feature-title">Presisi & Perhatian Detail</h3>
+              <p class="feature-desc">
+                Perhitungan akurat hingga ukuran millimeter, pencahayaan alami, dan ventilasi silang demi kenyamanan maksimal keluarga.
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -329,7 +482,10 @@
     <div class="row g-5">
       <div class="col-lg-4">
         <div class="footer-brand">
-          <div class="footer-brand-name"><i class="bi bi-building" style="color:var(--clr-accent);"></i> Jasa <span>Arsitek</span> Rumah</div>
+          <div class="footer-brand-name">
+            <img src="assets/img/logo-arsitek-rumah.webp" alt="Logo Jasa Arsitek Rumah" class="footer-brand-logo" width="32" height="32" />
+            <span>Jasa <span>Arsitek</span> Rumah</span>
+          </div>
           <p class="footer-brand-desc">Mitra desain arsitektur terpercaya untuk mewujudkan rumah impian Anda — profesional, personal, dan penuh perhatian pada detail.</p>
         </div>
       </div>
