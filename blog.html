@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Arsitektur & Tips Desain Rumah | Jasa Arsitek Rumah</title>
+  <meta name="description"
+    content="Artikel, tips, dan inspirasi desain rumah minimalis, modern, dan tropis dari tim arsitek profesional Jasa Arsitek Rumah. Temukan panduan membangun dan merenovasi rumah yang tepat." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://jasaarsitekrumah.web.id/blog.html" />
+  <meta property="og:title" content="Blog Arsitektur & Tips Desain Rumah | Jasa Arsitek Rumah" />
+  <meta property="og:description"
+    content="Tips membangun rumah, inspirasi desain, dan panduan arsitektur dari tim profesional." />
+  <meta property="og:url" content="https://jasaarsitekrumah.web.id/blog.html" />
+  <meta property="og:type" content="website" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://jasaarsitekrumah.web.id/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://jasaarsitekrumah.web.id/blog.html" }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/inner.css" />
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+
+  <!-- NAVBAR -->
+  <header id="navbar" role="banner">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between">
+        <a href="index.html" class="navbar-brand text-decoration-none" aria-label="Jasa Arsitek Rumah - Beranda">
+          <div class="navbar-brand-text"><i class="bi bi-building me-1"
+              style="color:var(--clr-accent);font-size:1.25rem;"></i>Jasa <span>Arsitek</span> Rumah</div>
+          <div class="navbar-brand-sub">jasaarsitekrumah.web.id</div>
+        </a>
+        <nav class="nav-links-desktop d-flex align-items-center gap-1" aria-label="Navigasi utama">
+          <a href="index.html" class="nav-link-custom">Beranda</a>
+          <a href="tentang.html" class="nav-link-custom">Tentang</a>
+          <div class="nav-dropdown">
+            <button class="nav-link-custom d-flex align-items-center gap-1 border-0 bg-transparent p-0"
+              aria-haspopup="true" aria-expanded="false" id="layananMenuBtn">Layanan <i class="bi bi-chevron-down"
+                style="font-size:0.7rem;transition:transform 0.3s;"></i></button>
+            <div class="dropdown-menu-custom" role="menu" aria-labelledby="layananMenuBtn">
+              <a href="layanan/desain-arsitektur-rumah.html" class="dropdown-item-custom" role="menuitem"><span
+                  class="di-icon"><i class="bi bi-house-door"></i></span>Desain Arsitektur Rumah</a>
+              <a href="layanan/desain-minimalis.html" class="dropdown-item-custom" role="menuitem"><span
+                  class="di-icon"><i class="bi bi-grid-1x2"></i></span>Desain Rumah Minimalis</a>
+              <a href="layanan/desain-modern.html" class="dropdown-item-custom" role="menuitem"><span class="di-icon"><i
+                    class="bi bi-building-up"></i></span>Desain Rumah Modern</a>
+              <a href="layanan/desain-interior.html" class="dropdown-item-custom" role="menuitem"><span
+                  class="di-icon"><i class="bi bi-lamp"></i></span>Desain Interior</a>
+              <a href="layanan/gambar-kerja-ded.html" class="dropdown-item-custom" role="menuitem"><span
+                  class="di-icon"><i class="bi bi-file-earmark-ruled"></i></span>Gambar Kerja / DED</a>
+              <a href="layanan/visualisasi-3d.html" class="dropdown-item-custom" role="menuitem"><span
+                  class="di-icon"><i class="bi bi-badge-3d"></i></span>3D Visualisasi</a>
+              <a href="layanan/rab-estimasi-biaya.html" class="dropdown-item-custom" role="menuitem"><span
+                  class="di-icon"><i class="bi bi-calculator"></i></span>RAB / Estimasi Biaya</a>
+              <a href="layanan/pengawasan-pembangunan.html" class="dropdown-item-custom" role="menuitem"><span
+                  class="di-icon"><i class="bi bi-person-check"></i></span>Pengawasan Pembangunan</a>
+              <a href="layanan/renovasi-rumah.html" class="dropdown-item-custom" role="menuitem"><span
+                  class="di-icon"><i class="bi bi-hammer"></i></span>Renovasi Rumah</a>
+            </div>
+          </div>
+          <a href="galeri.html" class="nav-link-custom">Galeri</a>
+          <a href="blog.html" class="nav-link-custom active" aria-current="page">Blog</a>
+        </nav>
+        <div class="d-flex align-items-center gap-3">
+          <a href="https://wa.me/6288989643555?text=Halo%2C%20saya%20ingin%20konsultasi%20mengenai%20jasa%20arsitek%20rumah"
+            class="btn-primary-custom d-none d-lg-inline-flex" target="_blank" rel="noopener noreferrer"><i
+              class="bi bi-whatsapp"></i> Konsultasi Gratis</a>
+          <button class="hamburger-btn d-lg-none" id="hamburgerBtn" aria-label="Buka menu" aria-expanded="false"
+            aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobileOverlay" class="mobile-overlay" aria-hidden="true"></div>
+  <nav id="mobileMenu" class="mobile-menu" aria-label="Navigasi mobile">
+    <ul>
+      <li><a href="index.html" class="mobile-nav-link">Beranda</a></li>
+      <li><a href="tentang.html" class="mobile-nav-link">Tentang</a></li>
+      <li>
+        <div class="mobile-nav-link mobile-dropdown-toggle" role="button" tabindex="0" aria-expanded="false">Layanan <i
+            class="bi bi-chevron-down toggle-icon"></i></div>
+        <div class="mobile-dropdown-list">
+          <a href="layanan/desain-arsitektur-rumah.html">Desain Arsitektur Rumah</a>
+          <a href="layanan/desain-minimalis.html">Desain Rumah Minimalis</a>
+          <a href="layanan/desain-modern.html">Desain Rumah Modern</a>
+          <a href="layanan/desain-interior.html">Desain Interior</a>
+          <a href="layanan/gambar-kerja-ded.html">Gambar Kerja / DED</a>
+          <a href="layanan/visualisasi-3d.html">3D Visualisasi</a>
+          <a href="layanan/rab-estimasi-biaya.html">RAB / Estimasi Biaya</a>
+          <a href="layanan/pengawasan-pembangunan.html">Pengawasan Pembangunan</a>
+          <a href="layanan/renovasi-rumah.html">Renovasi Rumah</a>
+        </div>
+      </li>
+      <li><a href="galeri.html" class="mobile-nav-link">Galeri</a></li>
+      <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+    </ul>
+    <div class="mt-4"><a
+        href="https://wa.me/6288989643555?text=Halo%2C%20saya%20ingin%20konsultasi%20mengenai%20jasa%20arsitek%20rumah"
+        class="btn-wa w-100 justify-content-center" target="_blank" rel="noopener noreferrer"><i
+          class="bi bi-whatsapp"></i> Konsultasi Gratis via WhatsApp</a></div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb-section" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-nav">
+        <li><a href="index.html"><i class="bi bi-house me-1"></i>Beranda</a></li>
+        <li aria-current="page">Blog</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <div class="page-eyebrow"><i class="bi bi-journal-text"></i> Artikel & Tips</div>
+      <h1>Blog <span>Arsitektur</span> & Tips Desain Rumah</h1>
+      <p class="page-hero-desc">Temukan inspirasi desain, tips membangun rumah, dan panduan arsitektur dari tim
+        profesional kami — semua yang Anda butuhkan untuk keputusan terbaik sebelum membangun.</p>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <section class="section-pad" style="background:var(--clr-off-white);" aria-labelledby="blogPageTitle">
+      <div class="container">
+        <h2 class="visually-hidden" id="blogPageTitle">Daftar Artikel Blog</h2>
+
+        <!-- Filter & Search Bar -->
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+          <div class="d-flex flex-wrap gap-2">
+            <button class="blog-cat-btn active">Semua</button>
+            <button class="blog-cat-btn">Inspirasi Desain</button>
+            <button class="blog-cat-btn">Tips Membangun</button>
+            <button class="blog-cat-btn">3D Visualisasi</button>
+            <button class="blog-cat-btn">Renovasi</button>
+            <button class="blog-cat-btn">Interior</button>
+          </div>
+          <div class="blog-search-wrap">
+            <i class="bi bi-search blog-search-icon"></i>
+            <input type="search" class="blog-search-input" placeholder="Cari artikel..." aria-label="Cari artikel" />
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Main content -->
+          <div class="col-lg-8">
+            <div class="row g-4">
+
+              <div class="col-12 reveal" data-delay="0">
+                <article class="blog-featured" itemscope itemtype="https://schema.org/BlogPosting">
+                  <div style="position:relative;">
+                    <div class="blog-img-wrap" style="aspect-ratio:21/9;">
+                      <div class="blog-img-placeholder"
+                        style="background:linear-gradient(135deg,#1a1a2e,#16213e);height:100%;"><i
+                          class="bi bi-house-door"></i></div>
+                    </div>
+                    <span class="blog-cat">Inspirasi Desain</span>
+                  </div>
+                  <div style="padding:2rem;">
+                    <div class="blog-meta"><span><i class="bi bi-calendar3"></i> 20 Agustus 2026</span></div>
+                    <h2 class="blog-title" itemprop="headline" style="font-size:var(--fs-2xl);">
+                      <a href="blog/inspirasi-desain-rumah-minimalis-modern-lahan-terbatas.html" style="color:inherit;text-decoration:none;">7 Inspirasi Desain Rumah Minimalis Modern
+                        untuk Lahan Terbatas</a>
+                    </h2>
+                    <p itemprop="description"
+                      style="font-size:var(--fs-sm);color:var(--clr-text-light);line-height:1.8;margin-bottom:1.25rem;">
+                      Memiliki lahan sempit bukan berarti harus mengorbankan kenyamanan dan estetika. Simak 7 inspirasi
+                      desain rumah minimalis modern yang memaksimalkan setiap meter persegi lahan Anda dengan pendekatan
+                      arsitektur yang cerdas dan fungsional.</p>
+                    <a href="blog/inspirasi-desain-rumah-minimalis-modern-lahan-terbatas.html" class="blog-link">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-md-6 reveal" data-delay="0">
+                <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+                  <div class="blog-img-wrap" style="position:relative;">
+                    <div class="blog-img-placeholder"
+                      style="background:linear-gradient(135deg,#16213e,#1e3a5c);height:220px;"><i
+                        class="bi bi-file-earmark-ruled"></i></div>
+                    <span class="blog-cat">Tips Membangun</span>
+                  </div>
+                  <div class="blog-body">
+                    <div class="blog-meta"><span><i class="bi bi-calendar3"></i> 15 Agus 2026</span></div>
+                    <h3 class="blog-title" itemprop="headline"><a href="#"
+                        style="color:inherit;text-decoration:none;">Mengapa Gambar Kerja DED Sangat Penting Sebelum
+                        Membangun Rumah?</a></h3>
+                    <p class="blog-excerpt" itemprop="description">Banyak pemilik rumah melewatkan tahap gambar kerja.
+                      Ketahui mengapa keputusan ini bisa berujung pada pembengkakan biaya dan pekerjaan ulang.</p>
+                    <a href="#" class="blog-link">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-md-6 reveal" data-delay="100">
+                <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+                  <div class="blog-img-wrap" style="position:relative;">
+                    <div class="blog-img-placeholder"
+                      style="background:linear-gradient(135deg,#1e2e1a,#2e4a28);height:220px;"><i
+                        class="bi bi-badge-3d"></i></div>
+                    <span class="blog-cat">3D Visualisasi</span>
+                  </div>
+                  <div class="blog-body">
+                    <div class="blog-meta"><span><i class="bi bi-calendar3"></i> 10 Agus 2026</span></div>
+                    <h3 class="blog-title" itemprop="headline"><a href="#"
+                        style="color:inherit;text-decoration:none;">Manfaat Visualisasi 3D dalam Proses Desain Rumah</a>
+                    </h3>
+                    <p class="blog-excerpt" itemprop="description">Visualisasi 3D bukan sekadar gambar cantik — ini
+                      adalah alat komunikasi paling efektif antara arsitek dan pemilik rumah.</p>
+                    <a href="#" class="blog-link">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-md-6 reveal" data-delay="0">
+                <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+                  <div class="blog-img-wrap" style="position:relative;">
+                    <div class="blog-img-placeholder"
+                      style="background:linear-gradient(135deg,#2a1a1a,#3a2e2e);height:220px;"><i
+                        class="bi bi-hammer"></i></div>
+                    <span class="blog-cat">Renovasi</span>
+                  </div>
+                  <div class="blog-body">
+                    <div class="blog-meta"><span><i class="bi bi-calendar3"></i> 5 Agus 2026</span></div>
+                    <h3 class="blog-title" itemprop="headline"><a href="#" style="color:inherit;text-decoration:none;">5
+                        Kesalahan Umum dalam Renovasi Rumah yang Harus Dihindari</a></h3>
+                    <p class="blog-excerpt" itemprop="description">Renovasi rumah bisa menjadi pengalaman memuaskan atau
+                      mimpi buruk — tergantung bagaimana perencanaannya dilakukan. Hindari 5 kesalahan ini.</p>
+                    <a href="#" class="blog-link">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-md-6 reveal" data-delay="100">
+                <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+                  <div class="blog-img-wrap" style="position:relative;">
+                    <div class="blog-img-placeholder"
+                      style="background:linear-gradient(135deg,#1a2a1a,#2e3a2e);height:220px;"><i
+                        class="bi bi-lamp"></i></div>
+                    <span class="blog-cat">Interior</span>
+                  </div>
+                  <div class="blog-body">
+                    <div class="blog-meta"><span><i class="bi bi-calendar3"></i> 28 Jul 2026</span></div>
+                    <h3 class="blog-title" itemprop="headline"><a href="#"
+                        style="color:inherit;text-decoration:none;">Tren Desain Interior 2026: Minimalis Natural yang
+                        Semakin Populer</a></h3>
+                    <p class="blog-excerpt" itemprop="description">Eksplorasi tren interior 2026 yang berfokus pada
+                      material alami, warna tanah, dan pencahayaan yang harmonis dengan alam.</p>
+                    <a href="#" class="blog-link">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-md-6 reveal" data-delay="0">
+                <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+                  <div class="blog-img-wrap" style="position:relative;">
+                    <div class="blog-img-placeholder"
+                      style="background:linear-gradient(135deg,#1a1e2e,#252a3a);height:220px;"><i
+                        class="bi bi-calculator"></i></div>
+                    <span class="blog-cat">Tips Membangun</span>
+                  </div>
+                  <div class="blog-body">
+                    <div class="blog-meta"><span><i class="bi bi-calendar3"></i> 20 Jul 2026</span></div>
+                    <h3 class="blog-title" itemprop="headline"><a href="#"
+                        style="color:inherit;text-decoration:none;">Cara Membuat RAB Rumah yang Akurat: Panduan untuk
+                        Pemula</a></h3>
+                    <p class="blog-excerpt" itemprop="description">Rencana Anggaran Biaya (RAB) yang tepat adalah kunci
+                      suksesnya pembangunan rumah. Pelajari cara menyusunnya dengan benar.</p>
+                    <a href="#" class="blog-link">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-md-6 reveal" data-delay="100">
+                <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+                  <div class="blog-img-wrap" style="position:relative;">
+                    <div class="blog-img-placeholder"
+                      style="background:linear-gradient(135deg,#1e2a1a,#2e3a28);height:220px;"><i
+                        class="bi bi-tree"></i></div>
+                    <span class="blog-cat">Inspirasi Desain</span>
+                  </div>
+                  <div class="blog-body">
+                    <div class="blog-meta"><span><i class="bi bi-calendar3"></i> 15 Jul 2026</span></div>
+                    <h3 class="blog-title" itemprop="headline"><a href="#"
+                        style="color:inherit;text-decoration:none;">Arsitektur Tropis: Mendesain Rumah yang Nyaman di
+                        Iklim Indonesia</a></h3>
+                    <p class="blog-excerpt" itemprop="description">Pendekatan desain arsitektur tropis yang memanfaatkan
+                      ventilasi alami, atap miring, dan taman untuk menciptakan hunian yang sejuk dan nyaman.</p>
+                    <a href="#" class="blog-link">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </article>
+              </div>
+
+            </div><!-- /row articles -->
+
+            <!-- Pagination -->
+            <nav aria-label="Halaman artikel" class="mt-5">
+              <ul class="d-flex gap-2 justify-content-center" style="list-style:none;padding:0;">
+                <li><a href="#"
+                    style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:var(--radius-sm);background:var(--clr-accent);color:var(--clr-primary);font-weight:700;font-size:var(--fs-sm);">1</a>
+                </li>
+                <li><a href="#"
+                    style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:var(--radius-sm);background:var(--clr-white);border:1px solid var(--clr-border);color:var(--clr-text-light);font-size:var(--fs-sm);">2</a>
+                </li>
+                <li><a href="#"
+                    style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:var(--radius-sm);background:var(--clr-white);border:1px solid var(--clr-border);color:var(--clr-text-light);font-size:var(--fs-sm);">3</a>
+                </li>
+                <li><a href="#"
+                    style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:var(--radius-sm);background:var(--clr-white);border:1px solid var(--clr-border);color:var(--clr-text-light);font-size:var(--fs-sm);"><i
+                      class="bi bi-chevron-right"></i></a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="col-lg-4">
+            <div class="sticky-sidebar">
+
+              <!-- Recent Posts -->
+              <div class="sidebar-widget">
+                <span class="sidebar-widget-title">Artikel Terbaru</span>
+                <a href="blog/inspirasi-desain-rumah-minimalis-modern-lahan-terbatas.html" class="sidebar-recent-post">
+                  <div class="sidebar-post-thumb"><i class="bi bi-house-door"></i></div>
+                  <div>
+                    <div class="sidebar-post-title">7 Inspirasi Desain Rumah Minimalis Modern</div>
+                    <div class="sidebar-post-date"><i class="bi bi-calendar3 me-1"></i>20 Agustus 2026</div>
+                  </div>
+                </a>
+                <a href="#" class="sidebar-recent-post">
+                  <div class="sidebar-post-thumb"><i class="bi bi-file-earmark-ruled"></i></div>
+                  <div>
+                    <div class="sidebar-post-title">Pentingnya Gambar Kerja DED Sebelum Membangun</div>
+                    <div class="sidebar-post-date"><i class="bi bi-calendar3 me-1"></i>15 Agustus 2026</div>
+                  </div>
+                </a>
+                <a href="#" class="sidebar-recent-post">
+                  <div class="sidebar-post-thumb"><i class="bi bi-badge-3d"></i></div>
+                  <div>
+                    <div class="sidebar-post-title">Manfaat Visualisasi 3D dalam Proses Desain</div>
+                    <div class="sidebar-post-date"><i class="bi bi-calendar3 me-1"></i>10 Agustus 2026</div>
+                  </div>
+                </a>
+                <a href="#" class="sidebar-recent-post">
+                  <div class="sidebar-post-thumb"><i class="bi bi-hammer"></i></div>
+                  <div>
+                    <div class="sidebar-post-title">5 Kesalahan Umum dalam Renovasi Rumah</div>
+                    <div class="sidebar-post-date"><i class="bi bi-calendar3 me-1"></i>5 Agustus 2026</div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Kategori -->
+              <div class="sidebar-widget">
+                <span class="sidebar-widget-title">Kategori</span>
+                <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.25rem;">
+                  <a href="#"
+                    style="display:inline-flex;align-items:center;gap:0.375rem;padding:0.375rem 0.875rem;border-radius:var(--radius-full);font-size:var(--fs-xs);font-weight:600;border:1px solid var(--clr-border);color:var(--clr-text-light);text-decoration:none;transition:all 0.3s;"
+                    onmouseover="this.style.background='var(--clr-accent)';this.style.borderColor='var(--clr-accent)';this.style.color='var(--clr-primary)'"
+                    onmouseout="this.style.background='';this.style.borderColor='var(--clr-border)';this.style.color='var(--clr-text-light)'">Inspirasi
+                    Desain</a>
+                  <a href="#"
+                    style="display:inline-flex;align-items:center;gap:0.375rem;padding:0.375rem 0.875rem;border-radius:var(--radius-full);font-size:var(--fs-xs);font-weight:600;border:1px solid var(--clr-border);color:var(--clr-text-light);text-decoration:none;transition:all 0.3s;"
+                    onmouseover="this.style.background='var(--clr-accent)';this.style.borderColor='var(--clr-accent)';this.style.color='var(--clr-primary)'"
+                    onmouseout="this.style.background='';this.style.borderColor='var(--clr-border)';this.style.color='var(--clr-text-light)'">Tips
+                    Membangun</a>
+                  <a href="#"
+                    style="display:inline-flex;align-items:center;gap:0.375rem;padding:0.375rem 0.875rem;border-radius:var(--radius-full);font-size:var(--fs-xs);font-weight:600;border:1px solid var(--clr-border);color:var(--clr-text-light);text-decoration:none;transition:all 0.3s;"
+                    onmouseover="this.style.background='var(--clr-accent)';this.style.borderColor='var(--clr-accent)';this.style.color='var(--clr-primary)'"
+                    onmouseout="this.style.background='';this.style.borderColor='var(--clr-border)';this.style.color='var(--clr-text-light)'">3D
+                    Visualisasi</a>
+                  <a href="#"
+                    style="display:inline-flex;align-items:center;gap:0.375rem;padding:0.375rem 0.875rem;border-radius:var(--radius-full);font-size:var(--fs-xs);font-weight:600;border:1px solid var(--clr-border);color:var(--clr-text-light);text-decoration:none;transition:all 0.3s;"
+                    onmouseover="this.style.background='var(--clr-accent)';this.style.borderColor='var(--clr-accent)';this.style.color='var(--clr-primary)'"
+                    onmouseout="this.style.background='';this.style.borderColor='var(--clr-border)';this.style.color='var(--clr-text-light)'">Renovasi</a>
+                  <a href="#"
+                    style="display:inline-flex;align-items:center;gap:0.375rem;padding:0.375rem 0.875rem;border-radius:var(--radius-full);font-size:var(--fs-xs);font-weight:600;border:1px solid var(--clr-border);color:var(--clr-text-light);text-decoration:none;transition:all 0.3s;"
+                    onmouseover="this.style.background='var(--clr-accent)';this.style.borderColor='var(--clr-accent)';this.style.color='var(--clr-primary)'"
+                    onmouseout="this.style.background='';this.style.borderColor='var(--clr-border)';this.style.color='var(--clr-text-light)'">Interior</a>
+                  <a href="#"
+                    style="display:inline-flex;align-items:center;gap:0.375rem;padding:0.375rem 0.875rem;border-radius:var(--radius-full);font-size:var(--fs-xs);font-weight:600;border:1px solid var(--clr-border);color:var(--clr-text-light);text-decoration:none;transition:all 0.3s;"
+                    onmouseover="this.style.background='var(--clr-accent)';this.style.borderColor='var(--clr-accent)';this.style.color='var(--clr-primary)'"
+                    onmouseout="this.style.background='';this.style.borderColor='var(--clr-border)';this.style.color='var(--clr-text-light)'">Arsitektur
+                    Tropis</a>
+                </div>
+              </div>
+
+              <!-- Layanan Widget -->
+              <div class="sidebar-widget">
+                <span class="sidebar-widget-title">Layanan Kami</span>
+                <a href="layanan/desain-arsitektur-rumah.html" class="related-service-card"><span class="rs-icon"><i
+                      class="bi bi-house-door"></i></span><span class="rs-title">Desain Arsitektur</span><i
+                    class="bi bi-chevron-right" style="color:var(--clr-muted);font-size:0.75rem;"></i></a>
+                <a href="layanan/desain-interior.html" class="related-service-card"><span class="rs-icon"><i
+                      class="bi bi-lamp"></i></span><span class="rs-title">Desain Interior</span><i
+                    class="bi bi-chevron-right" style="color:var(--clr-muted);font-size:0.75rem;"></i></a>
+                <a href="layanan/visualisasi-3d.html" class="related-service-card"><span class="rs-icon"><i
+                      class="bi bi-badge-3d"></i></span><span class="rs-title">3D Visualisasi</span><i
+                    class="bi bi-chevron-right" style="color:var(--clr-muted);font-size:0.75rem;"></i></a>
+                <a href="layanan/renovasi-rumah.html" class="related-service-card"><span class="rs-icon"><i
+                      class="bi bi-hammer"></i></span><span class="rs-title">Renovasi Rumah</span><i
+                    class="bi bi-chevron-right" style="color:var(--clr-muted);font-size:0.75rem;"></i></a>
+              </div>
+
+            </div><!-- /sticky-sidebar -->
+          </div>
+
+        </div><!-- /row -->
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <div class="footer-brand-name"><i class="bi bi-building" style="color:var(--clr-accent);"></i> Jasa
+              <span>Arsitek</span> Rumah</div>
+            <p class="footer-brand-desc">Mitra desain arsitektur terpercaya untuk mewujudkan rumah impian Anda —
+              profesional, personal, dan penuh perhatian pada detail.</p>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h3 class="footer-heading">Navigasi</h3>
+          <nav class="footer-links"><a href="index.html">Beranda</a><a href="tentang.html">Tentang</a><a
+              href="index.html#services">Layanan</a><a href="galeri.html">Galeri</a><a href="blog.html">Blog</a><a
+              href="index.html#faq">FAQ</a></nav>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h3 class="footer-heading">Layanan</h3>
+          <nav class="footer-links">
+            <a href="layanan/desain-arsitektur-rumah.html">Desain Arsitektur</a>
+            <a href="layanan/desain-interior.html">Desain Interior</a>
+            <a href="layanan/gambar-kerja-ded.html">Gambar Kerja / DED</a>
+            <a href="layanan/visualisasi-3d.html">3D Visualisasi</a>
+            <a href="layanan/renovasi-rumah.html">Renovasi Rumah</a>
+            <a href="layanan/pengawasan-pembangunan.html">Pengawasan</a>
+            <a href="layanan/rab-estimasi-biaya.html">RAB / Estimasi Biaya</a>
+          </nav>
+        </div>
+        <!-- Kontak -->
+        <div class="col-lg-3">
+          <h3 class="footer-heading">Kontak</h3>
+          <ul class="footer-contact-list" style="list-style: none; padding: 0; margin: 0 0 1.25rem 0;">
+            <li
+              style="display: flex; gap: 0.75rem; color: rgba(255,255,255,0.7); font-size: var(--fs-sm); margin-bottom: 0.875rem; line-height: 1.6;">
+              <i class="bi bi-geo-alt-fill"
+                style="color: var(--clr-accent); font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;"></i>
+              <span>Jl. Arsitektur Raya No. 88, Kemang, Jakarta Selatan, DKI Jakarta 12730</span>
+            </li>
+            <li
+              style="display: flex; gap: 0.75rem; color: rgba(255,255,255,0.7); font-size: var(--fs-sm); margin-bottom: 0.875rem; line-height: 1.6;">
+              <i class="bi bi-telephone-fill"
+                style="color: var(--clr-accent); font-size: 1rem; flex-shrink: 0; margin-top: 3px;"></i>
+              <span style="color: rgba(255,255,255,0.85); font-weight: 600;">0889-8964-3555</span>
+            </li>
+            <li
+              style="display: flex; gap: 0.75rem; color: rgba(255,255,255,0.7); font-size: var(--fs-sm); line-height: 1.6;">
+              <i class="bi bi-envelope-fill"
+                style="color: var(--clr-accent); font-size: 1rem; flex-shrink: 0; margin-top: 3px;"></i>
+              <a href="mailto:kontak.jasaarsitek@gmail.com"
+                style="color: rgba(255,255,255,0.85); text-decoration: none;">kontak.jasaarsitek@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Jasa Arsitek Rumah. All Rights Reserved.</p>
+        <div class="footer-legal"><a href="#">Kebijakan Privasi</a><a href="#">Sitemap</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Kembali ke atas" title="Kembali ke atas">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <a href="https://wa.me/6288989643555?text=Halo%2C%20saya%20ingin%20konsultasi%20mengenai%20jasa%20arsitek%20rumah"
+    class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
