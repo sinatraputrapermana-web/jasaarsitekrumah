@@ -84,7 +84,7 @@ hamburgerBtn?.addEventListener('click', () => {
 mobileOverlay?.addEventListener('click', closeMobileMenu);
 
 // Close menu on nav link click
-qsa('.mobile-nav-link:not(.mobile-dropdown-toggle)').forEach(link => {
+qsa('.mobile-nav-link:not(.mobile-dropdown-toggle), .mobile-dropdown-list a').forEach(link => {
   link.addEventListener('click', closeMobileMenu);
 });
 
@@ -479,11 +479,12 @@ function initDepthCarousel() {
 
   function updateCards() {
     const isMobile = window.innerWidth <= 768;
-    const xStep1 = isMobile ? 55 : 75;
-    const xStep2 = isMobile ? 100 : 135;
-    const zStep1 = isMobile ? -140 : -200;
-    const zStep2 = isMobile ? -280 : -380;
-    const rotStep = isMobile ? 22 : 30;
+    const isNarrow = window.innerWidth <= 480;
+    const xStep1 = isNarrow ? 36 : (isMobile ? 52 : 75);
+    const xStep2 = isNarrow ? 68 : (isMobile ? 96 : 135);
+    const zStep1 = isNarrow ? -110 : (isMobile ? -140 : -200);
+    const zStep2 = isNarrow ? -220 : (isMobile ? -280 : -380);
+    const rotStep = isNarrow ? 18 : (isMobile ? 22 : 30);
 
     cards.forEach((card, index) => {
       let offset = index - activeIndex;
@@ -841,9 +842,122 @@ function initAboutSlider() {
 }
 
 /* =========================================
+   HERO 3D MODEL VIEWER (BOOTSTRAPMADE / REACTBITS STYLE)
+   ========================================= */
+function initHeroModelViewer() {
+  const viewer = document.getElementById('heroModelViewer');
+  const card = document.getElementById('modelViewerCard');
+  if (!viewer || !card) return;
+
+  const glare = card.querySelector('.model-glare');
+  const badges = card.querySelectorAll('.model-badge');
+
+  let bounds = null;
+  let currentRotX = 0;
+  let currentRotY = 0;
+  let targetRotX = 0;
+  let targetRotY = 0;
+  let isHovered = false;
+  let isTouching = false;
+
+  function updateBounds() {
+    bounds = viewer.getBoundingClientRect();
+  }
+
+  window.addEventListener('resize', updateBounds);
+  window.addEventListener('scroll', updateBounds, { passive: true });
+  updateBounds();
+
+  function onPointerMove(clientX, clientY) {
+    if (!bounds) updateBounds();
+    const centerX = bounds.left + bounds.width / 2;
+    const centerY = bounds.top + bounds.height / 2;
+
+    const normX = Math.max(-1, Math.min(1, (clientX - centerX) / (bounds.width / 2)));
+    const normY = Math.max(-1, Math.min(1, (clientY - centerY) / (bounds.height / 2)));
+
+    targetRotY = normX * 15;
+    targetRotX = -normY * 15;
+
+    if (glare) {
+      const glareX = ((normX + 1) / 2) * 100;
+      const glareY = ((normY + 1) / 2) * 100;
+      glare.style.setProperty('--glare-x', `${glareX}%`);
+      glare.style.setProperty('--glare-y', `${glareY}%`);
+      glare.style.setProperty('--glare-opacity', '0.6');
+    }
+  }
+
+  function render() {
+    const ease = isHovered || isTouching ? 0.12 : 0.06;
+    currentRotX += (targetRotX - currentRotX) * ease;
+    currentRotY += (targetRotY - currentRotY) * ease;
+
+    card.style.transform = `rotateX(${currentRotX.toFixed(2)}deg) rotateY(${currentRotY.toFixed(2)}deg)`;
+
+    badges.forEach(b => {
+      const depth = parseFloat(b.getAttribute('data-depth') || '40');
+      const offsetX = (currentRotY / 15) * (depth * 0.22);
+      const offsetY = -(currentRotX / 15) * (depth * 0.22);
+      b.style.transform = `translateZ(${depth}px) translate(${offsetX.toFixed(1)}px, ${offsetY.toFixed(1)}px)`;
+    });
+
+    requestAnimationFrame(render);
+  }
+
+  viewer.addEventListener('mouseenter', () => {
+    isHovered = true;
+    updateBounds();
+  });
+
+  viewer.addEventListener('mousemove', (e) => {
+    isHovered = true;
+    onPointerMove(e.clientX, e.clientY);
+  });
+
+  viewer.addEventListener('mouseleave', () => {
+    isHovered = false;
+    targetRotX = 0;
+    targetRotY = 0;
+    if (glare) {
+      glare.style.setProperty('--glare-opacity', '0');
+    }
+  });
+
+  viewer.addEventListener('touchstart', (e) => {
+    isTouching = true;
+    updateBounds();
+    if (e.touches && e.touches.length > 0) {
+      onPointerMove(e.touches[0].clientX, e.touches[0].clientY);
+    }
+  }, { passive: true });
+
+  viewer.addEventListener('touchmove', (e) => {
+    isTouching = true;
+    if (e.touches && e.touches.length > 0) {
+      onPointerMove(e.touches[0].clientX, e.touches[0].clientY);
+    }
+  }, { passive: true });
+
+  viewer.addEventListener('touchend', () => {
+    isTouching = false;
+    targetRotX = 0;
+    targetRotY = 0;
+    if (glare) {
+      glare.style.setProperty('--glare-opacity', '0');
+    }
+  });
+
+  render();
+}
+
+/* =========================================
    INIT ON DOM READY
    ========================================= */
 document.addEventListener('DOMContentLoaded', () => {
+  // Init Hero 3D Model Viewer
+  initHeroModelViewer();
+
   // Init About Image Slider
   initAboutSlider();
 
@@ -864,4 +978,5 @@ document.addEventListener('DOMContentLoaded', () => {
     if (ans) ans.style.maxHeight = ans.scrollHeight + 'px';
   }
 });
+
 
