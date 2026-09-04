@@ -31,12 +31,30 @@
   <!-- Halaman Blog Indeks -->
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Artikel Blog -->
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/jasa-arsitek-rumah-minimalis-profesional-paket-desain-siap-bangun.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/cara-menghitung-rab-rumah-tinggal-secara-akurat-dan-praktis.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/7-tren-desain-interior-rumah-minimalis-modern-tahun-2026.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/jasa-desain-interior-rumah-tinggal-profesional-wujudkan-ruangan-estetik.html</loc>
     <lastmod>2026-09-03</lastmod>
