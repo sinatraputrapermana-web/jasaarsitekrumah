@@ -31,13 +31,18 @@
   <!-- Halaman Blog Indeks -->
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog.html</loc>
+<<<<<<< HEAD
     <lastmod>2026-09-05</lastmod>
+=======
+    <lastmod>2026-09-04</lastmod>
+>>>>>>> 0cb4498fe936edbd37938ec3e8dfa70fde165e4e
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Artikel Blog -->
   <url>
+<<<<<<< HEAD
     <loc>https://jasaarsitekrumah.web.id/blog/jasa-pembuatan-rab-rumah-profesional-untuk-pengajuan-kpr-kontraktor.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -56,6 +61,8 @@
     <priority>0.8</priority>
   </url>
   <url>
+=======
+>>>>>>> 0cb4498fe936edbd37938ec3e8dfa70fde165e4e
     <loc>https://jasaarsitekrumah.web.id/blog/jasa-arsitek-rumah-minimalis-profesional-paket-desain-siap-bangun.html</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
