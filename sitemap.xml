@@ -31,12 +31,30 @@
   <!-- Halaman Blog Indeks -->
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog.html</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Artikel Blog -->
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/jasa-pembuatan-gambar-kerja-ded-lengkap-arsitektur-struktur-instalasi.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/5-kriteria-utama-cara-memilih-jasa-arsitek-rumah-yang-profesional.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/mengapa-estimasi-biaya-rab-sangat-vital-sebelum-mulai-bangun-rumah.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/harga-jasa-arsitek-per-meter-persegi-2026-tarif-transparan-komponennya.html</loc>
     <lastmod>2026-09-07</lastmod>
