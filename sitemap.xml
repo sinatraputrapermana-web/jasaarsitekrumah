@@ -31,12 +31,30 @@
   <!-- Halaman Blog Indeks -->
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog.html</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Artikel Blog -->
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/jasa-pengawasan-konstruksi-rumah-agar-sesuai-gambar-anggaran.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/cara-memilih-warna-cat-rumah-minimalis-agar-tidak-salah-pilih.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/contoh-denah-rumah-2-lantai-type-60-yang-efisien-dan-nyaman.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/jasa-pembuatan-gambar-kerja-ded-lengkap-arsitektur-struktur-instalasi.html</loc>
     <lastmod>2026-09-08</lastmod>
