@@ -31,12 +31,30 @@
   <!-- Halaman Blog Indeks -->
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog.html</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Artikel Blog -->
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/tahapan-proses-membangun-rumah-dari-awal-sampai-selesai.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/jasa-desain-rumah-tropis-modern-sejuk-dan-estetik-sepanjang-tahun.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/7-ide-desain-kamar-tidur-utama-agar-lebih-nyaman-dan-estetik.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/jasa-desain-rumah-2-lantai-modern-hemat-lahan-dan-efisien.html</loc>
     <lastmod>2026-09-10</lastmod>
