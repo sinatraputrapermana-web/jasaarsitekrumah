@@ -31,12 +31,30 @@
   <!-- Halaman Blog Indeks -->
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog.html</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Artikel Blog -->
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/jasa-bangun-rumah-dari-nol-dari-desain-hingga-siap-huni.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/perbedaan-plafon-gypsum-dan-pvc.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/inspirasi-fasad-rumah-minimalis-1-lantai-yang-elegan.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/tahapan-proses-membangun-rumah-dari-awal-sampai-selesai.html</loc>
     <lastmod>2026-09-11</lastmod>
