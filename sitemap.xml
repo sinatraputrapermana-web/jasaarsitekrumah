@@ -4,39 +4,103 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- Halaman Utama -->
+  <!-- ========================================== -->
+  <!-- 1. Halaman Utama (Homepage)                -->
+  <!-- ========================================== -->
   <url>
     <loc>https://jasaarsitekrumah.web.id/</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Halaman Tentang -->
+  <!-- ========================================== -->
+  <!-- 2. Halaman Layanan Utama (Core Services)   -->
+  <!-- ========================================== -->
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/layanan/desain-arsitektur-rumah.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/layanan/desain-minimalis.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/layanan/desain-modern.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/layanan/desain-interior.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/layanan/gambar-kerja-ded.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/layanan/visualisasi-3d.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/layanan/rab-estimasi-biaya.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/layanan/pengawasan-pembangunan.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/layanan/renovasi-rumah.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ========================================== -->
+  <!-- 3. Halaman Navigasi & Informasi Utama      -->
+  <!-- ========================================== -->
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/galeri.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/tentang.html</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Halaman Galeri -->
-  <url>
-    <loc>https://jasaarsitekrumah.web.id/galeri.html</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Halaman Blog Indeks -->
+  <!-- ========================================== -->
+  <!-- 4. Halaman Indeks Blog                     -->
+  <!-- ========================================== -->
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>0.85</priority>
   </url>
 
-  <!-- Artikel Blog -->
+  <!-- ========================================== -->
+  <!-- 5. Artikel Blog (Terbaru ke Terlama)       -->
+  <!-- ========================================== -->
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/jasa-bangun-rumah-dari-nol-dari-desain-hingga-siap-huni.html</loc>
     <lastmod>2026-09-12</lastmod>
@@ -77,243 +141,187 @@
     <loc>https://jasaarsitekrumah.web.id/blog/jasa-desain-rumah-2-lantai-modern-hemat-lahan-dan-efisien.html</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/mengenal-apa-itu-boq-bill-of-quantity-dalam-proyek-bangun-rumah.html</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/8-ide-dekorasi-ruang-tamu-kecil-agar-terlihat-lebih-luas.html</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/jasa-pengawasan-konstruksi-rumah-agar-sesuai-gambar-anggaran.html</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/cara-memilih-warna-cat-rumah-minimalis-agar-tidak-salah-pilih.html</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/contoh-denah-rumah-2-lantai-type-60-yang-efisien-dan-nyaman.html</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/jasa-pembuatan-gambar-kerja-ded-lengkap-arsitektur-struktur-instalasi.html</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/5-kriteria-utama-cara-memilih-jasa-arsitek-rumah-yang-profesional.html</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/mengapa-estimasi-biaya-rab-sangat-vital-sebelum-mulai-bangun-rumah.html</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/harga-jasa-arsitek-per-meter-persegi-2026-tarif-transparan-komponennya.html</loc>
     <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/panduan-cara-mengurus-pbg-pengganti-imb-untuk-rumah-tinggal.html</loc>
     <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/kumpulan-contoh-3d-visualisasi-arsitektur-rendition-sangat-riil.html</loc>
     <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/jasa-pembuatan-rab-rumah-profesional-untuk-pengajuan-kpr-kontraktor.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/pentingnya-jasa-3d-visualisasi-manfaat-render-realistis-sebelum-bangun.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/konsep-arsitektur-rumah-modern-tropis-mewah-dan-sejuk-sehari-hari.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/jasa-arsitek-rumah-minimalis-profesional-paket-desain-siap-bangun.html</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/cara-menghitung-rab-rumah-tinggal-secara-akurat-dan-praktis.html</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/7-tren-desain-interior-rumah-minimalis-modern-tahun-2026.html</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/jasa-desain-interior-rumah-tinggal-profesional-wujudkan-ruangan-estetik.html</loc>
     <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/mengenal-perbedaan-rumah-minimalis-dan-modern-kontemporer.html</loc>
     <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/checklist-wajib-sebelum-merenovasi-rumah-lama-menjadi-minimalis.html</loc>
     <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/mengenal-apa-itu-gambar-kerja-ded-rumah.html</loc>
     <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/jasa-renovasi-rumah-terpercaya-bergaransi-survey-gratis-tukang-ahli.html</loc>
     <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/15-ide-desain-rumah-minimalis-modern-untuk-lahan-terbatas.html</loc>
     <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/arsitektur-tropis-mendesain-rumah-yang-nyaman-di-iklim-indonesia.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/cara-membuat-rab-rumah-yang-akurat-panduan-untuk-pemula.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/tren-desain-interior-2026-minimalis-natural-yang-semakin-populer.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/mengapa-gambar-kerja-ded-sangat-penting-sebelum-membangun-rumah.html</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/7-inspirasi-desain-rumah-minimalis-modern-lahan-terbatas.html</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/manfaat-visualisasi-3d-dalam-proses-desain-rumah.html</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/5-kesalahan-umum-dalam-renovasi-rumah-yang-harus-dihindari.html</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Halaman Layanan -->
-  <url>
-    <loc>https://jasaarsitekrumah.web.id/layanan/gambar-kerja-ded.html</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://jasaarsitekrumah.web.id/layanan/desain-arsitektur-rumah.html</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://jasaarsitekrumah.web.id/layanan/desain-minimalis.html</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jasaarsitekrumah.web.id/layanan/desain-modern.html</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jasaarsitekrumah.web.id/layanan/desain-interior.html</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jasaarsitekrumah.web.id/layanan/visualisasi-3d.html</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jasaarsitekrumah.web.id/layanan/rab-estimasi-biaya.html</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jasaarsitekrumah.web.id/layanan/pengawasan-pembangunan.html</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jasaarsitekrumah.web.id/layanan/renovasi-rumah.html</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
