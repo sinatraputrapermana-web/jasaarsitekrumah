@@ -93,7 +93,7 @@
   <!-- ========================================== -->
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog.html</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
@@ -102,13 +102,25 @@
   <!-- 5. Artikel Blog (Terbaru ke Terlama)       -->
   <!-- ========================================== -->
   <url>
-    <loc>https://jasaarsitekrumah.web.id/blog/perbedaan-lantai-vinyl-dan-keramik-mana-yang-cocok.html</loc>
-    <lastmod>2026-09-15</lastmod>
+    <loc>https://jasaarsitekrumah.web.id/blog/6-ide-desain-ruang-kerja-di-rumah-yang-produktif.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/jasa-renovasi-dapur-rumah-ubah-tampilan-tanpa-bongkar-total.html</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/8-inspirasi-taman-kecil-depan-rumah-minimalis.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/perbedaan-lantai-vinyl-dan-keramik-mana-yang-cocok.html</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
