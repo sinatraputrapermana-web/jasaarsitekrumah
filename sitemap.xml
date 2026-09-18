@@ -93,7 +93,7 @@
   <!-- ========================================== -->
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog.html</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
@@ -101,6 +101,18 @@
   <!-- ========================================== -->
   <!-- 5. Artikel Blog (Terbaru ke Terlama)       -->
   <!-- ========================================== -->
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/mengenal-struktur-rangka-beton-bertulang-untuk-rumah-tinggal.html</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/risiko-membangun-rumah-tanpa-gambar-kerja-yang-lengkap.html</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/cara-menghemat-biaya-bangun-rumah-tanpa-kurangi-kualitas.html</loc>
     <lastmod>2026-09-17</lastmod>
