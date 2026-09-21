@@ -93,7 +93,7 @@
   <!-- ========================================== -->
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
@@ -101,6 +101,18 @@
   <!-- ========================================== -->
   <!-- 5. Artikel Blog (Terbaru ke Terlama)       -->
   <!-- ========================================== -->
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/cara-menata-pencahayaan-rumah-minimalis-agar-tidak-monoton</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/jasa-renovasi-kamar-mandi-cepat-dan-rapi</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/inspirasi-desain-rumah-hook-di-lahan-sudut-yang-maksimal</loc>
     <lastmod>2026-09-19</lastmod>
