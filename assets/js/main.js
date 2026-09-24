@@ -34,9 +34,6 @@ function handleNavbarScroll() {
   lastScroll = scrollY;
 }
 
-window.addEventListener('scroll', handleNavbarScroll, { passive: true });
-handleNavbarScroll();
-
 // Active nav based on scroll position
 function setActiveNav() {
   const sections = qsa('section[id]');
@@ -57,7 +54,21 @@ function setActiveNav() {
   });
 }
 
-window.addEventListener('scroll', setActiveNav, { passive: true });
+// Unified, rAF-throttled scroll handler to prevent layout thrashing and main-thread blocking
+let scrollTicking = false;
+function onWindowScroll() {
+  if (!scrollTicking) {
+    window.requestAnimationFrame(() => {
+      handleNavbarScroll();
+      if (typeof handleBackToTopScroll === 'function') handleBackToTopScroll();
+      setActiveNav();
+      scrollTicking = false;
+    });
+    scrollTicking = true;
+  }
+}
+window.addEventListener('scroll', onWindowScroll, { passive: true });
+handleNavbarScroll();
 
 // Hamburger / mobile menu
 function openMobileMenu() {
@@ -391,7 +402,7 @@ function handleBackToTopScroll() {
   }
 }
 
-window.addEventListener('scroll', handleBackToTopScroll, { passive: true });
+// Initial check (scroll handler is unified in onWindowScroll)
 handleBackToTopScroll();
 
 backToTopBtn?.addEventListener('click', () => {
@@ -888,6 +899,8 @@ function initHeroModelViewer() {
     }
   }
 
+  let animFrameId = null;
+
   function render() {
     const ease = isHovered || isTouching ? 0.12 : 0.06;
     currentRotX += (targetRotX - currentRotX) * ease;
@@ -902,17 +915,37 @@ function initHeroModelViewer() {
       b.style.transform = `translateZ(${depth}px) translate(${offsetX.toFixed(1)}px, ${offsetY.toFixed(1)}px)`;
     });
 
-    requestAnimationFrame(render);
+    const diffX = Math.abs(targetRotX - currentRotX);
+    const diffY = Math.abs(targetRotY - currentRotY);
+
+    if (isHovered || isTouching || diffX > 0.05 || diffY > 0.05) {
+      animFrameId = requestAnimationFrame(render);
+    } else {
+      card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+      badges.forEach(b => {
+        const depth = parseFloat(b.getAttribute('data-depth') || '40');
+        b.style.transform = `translateZ(${depth}px) translate(0px, 0px)`;
+      });
+      animFrameId = null;
+    }
+  }
+
+  function startRender() {
+    if (!animFrameId) {
+      animFrameId = requestAnimationFrame(render);
+    }
   }
 
   viewer.addEventListener('mouseenter', () => {
     isHovered = true;
     updateBounds();
+    startRender();
   });
 
   viewer.addEventListener('mousemove', (e) => {
     isHovered = true;
     onPointerMove(e.clientX, e.clientY);
+    startRender();
   });
 
   viewer.addEventListener('mouseleave', () => {
@@ -922,6 +955,7 @@ function initHeroModelViewer() {
     if (glare) {
       glare.style.setProperty('--glare-opacity', '0');
     }
+    startRender();
   });
 
   viewer.addEventListener('touchstart', (e) => {
@@ -930,6 +964,7 @@ function initHeroModelViewer() {
     if (e.touches && e.touches.length > 0) {
       onPointerMove(e.touches[0].clientX, e.touches[0].clientY);
     }
+    startRender();
   }, { passive: true });
 
   viewer.addEventListener('touchmove', (e) => {
@@ -937,6 +972,7 @@ function initHeroModelViewer() {
     if (e.touches && e.touches.length > 0) {
       onPointerMove(e.touches[0].clientX, e.touches[0].clientY);
     }
+    startRender();
   }, { passive: true });
 
   viewer.addEventListener('touchend', () => {
@@ -946,29 +982,30 @@ function initHeroModelViewer() {
     if (glare) {
       glare.style.setProperty('--glare-opacity', '0');
     }
+    startRender();
   });
-
-  render();
 }
 
 /* =========================================
    INIT ON DOM READY
    ========================================= */
 document.addEventListener('DOMContentLoaded', () => {
-  // Init Hero 3D Model Viewer
+  // Init Hero 3D Model Viewer (event-based on-demand rAF, 0 idle load)
   initHeroModelViewer();
 
-  // Init About Image Slider
-  initAboutSlider();
+  // Defer heavy below-the-fold sliders/carousels to idle time to eliminate TBT
+  const initBelowFold = () => {
+    initAboutSlider();
+    initDepthCarousel();
+    initDriftWallGallery();
+    initProcessBookDeck();
+  };
 
-  // Init Services 3D Depth Carousel
-  initDepthCarousel();
-
-  // Init Drift Wall Gallery
-  initDriftWallGallery();
-
-  // Init Process Fanned Book Deck
-  initProcessBookDeck();
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(initBelowFold, { timeout: 1500 });
+  } else {
+    setTimeout(initBelowFold, 150);
+  }
 
   // Open first FAQ by default
   const firstFaq = qs('.faq-item');

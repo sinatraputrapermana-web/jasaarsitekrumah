@@ -1,38 +1,39 @@
 # Antigravity Critical Performance, A11y, & Agentic Browsing Rules - jasaarsitekrumah.web.id
 
-## 1. Tool Execution Constraints (MANDATORY)
+## 1. Tool Execution & File Inspection Restrictions (WAJIB)
 - DILARANG menggunakan terminal shell (PowerShell, CMD, Bash) HANYA untuk melihat, mencari, membaca, atau mendaftar isi file proyek.
-- SELALU gunakan native file reading tool (`read_file`, `view`, atau pembaca file internal agent) saat memeriksa berkas kode proyek.
-- Terminal shell HANYA diizinkan untuk eksekusi build test atau operasi git setelah mendapat izin.
+- SELALU gunakan native file reading tool (`read_file`, `view`, atau pembaca file internal editor/agent) saat menginspeksi kode sumber proyek.
+- Terminal shell HANYA diizinkan untuk eksekusi build test atau operasi git setelah ada konfirmasi eksplisit.
 
 ## 2. Scope & Design Guardrails
-- DILARANG merombak antarmuka (UI/UX), katalog portofolio arsitek, daftar paket, maupun fungsionalitas tombol WhatsApp. Tampilan dan fungsionalitas harus tetap 100% konsisten.
+- DILARANG merombak tata letak visual (UI/UX), katalog portofolio arsitektur, daftar paket harga, maupun tombol kontak WhatsApp. Tampilan dan fungsionalitas harus tetap 100% konsisten.
 - DILARANG menghapus elemen HTML fungsional atau memindahkan direktori aset tanpa path yang valid.
-- Semua optimasi harus bersifat surgical pada atribut HTML, penataan CSS (kontras & critical path), loading strategy, JSON-LD Schema, dan resource hints.
+- Semua optimasi harus bersifat surgical pada atribut HTML, penataan CSS (kontras & critical path), loading strategy, JSON-LD Schema, dan script deferring.
 
 ## 3. Prioritas Masalah Kritis Audit Terbaru
 
-### A. LCP Emergency Recovery (Target: Turunkan dari 8.1s ke < 2.5s)
-1. Preload Gambar Hero Banner:
-   - Pastikan path file gambar hero di tag `<head>` valid:
+### A. LCP & Main-Thread Recovery (Target: LCP < 2.5s, TBT < 200ms)
+1. Perbaikan Gambar LCP:
+   - Pastikan path file gambar hero di tag `<head>` valid dan memiliki prioritas tertinggi:
      `<link rel="preload" as="image" href="[path-gambar-hero]" fetchpriority="high">`
-   - DILARANG memasang `loading="lazy"` pada gambar hero banner viewport atas.
+   - DILARANG memasang atribut `loading="lazy"` pada gambar hero banner di viewport atas.
    - Pasang `loading="lazy"` dan `decoding="async"` HANYA pada gambar portofolio/galeri di bawah viewport (below-the-fold).
-2. Optimasi Ukuran Gambar (Properly Size Images):
-   - Pastikan resolusi asli aset gambar hero tidak berukuran raksasa jika hanya ditampilkan di layar mobile.
+   - Pastikan ukuran fisik gambar hero dioptimasi (format WebP, lebar maksimal 800-1000px untuk versi mobile).
+2. Pangkas TBT (Total Blocking Time 480ms):
+   - Tambahkan atribut `defer` pada seluruh script JavaScript eksternal di tag `<head>`.
+   - Hindari eksekusi script animasi/slider berat sebelum first paint selesai.
 
 ### B. Pemulihan Agentic Browsing (Target: Pulih ke 1/1 Hijau)
 1. Semantic Document Tree:
    - Pastikan struktur HTML membungkus konten utama menggunakan tag `<main role="main">`, header dengan `<header>`, navigasi dengan `<nav>`, dan footer dengan `<footer>`.
 2. Structured Data (Schema.org):
-   - Sisipkan blok `<script type="application/ld+json">` yang valid dengan tipe `ProfessionalService` atau `HomeAndConstructionBusiness` lengkap dengan nama bisnis, URL canonical, nomor kontak WhatsApp, dan deskripsi layanan.
+   - Sisipkan blok `<script type="application/ld+json">` yang valid dengan tipe `ProfessionalService` atau `HomeAndConstructionBusiness` lengkap dengan nama bisnis, URL canonical, kontak WhatsApp, dan deskripsi layanan.
 3. Machine-Readable Actions:
-   - Pastikan semua elemen interaktif (tombol WhatsApp, tombol form, tautan) memiliki label eksplisit atau `aria-label` yang dapat dipahami oleh AI Browsing agent.
+   - Pastikan semua elemen interaktif (tombol WhatsApp, tombol form, tautan) memiliki label eksplisit atau `aria-label` yang dapat dipahami bot AI browsing.
 
-### C. FCP & Render-Blocking (Target: < 1.8s)
-- Pasang atribut `defer` pada seluruh file JavaScript eksternal di `<head>`.
-- Tambahkan `preconnect` dan `dns-prefetch` untuk domain pihak ketiga (CDN fonts, WhatsApp API).
-- Pastikan Critical CSS untuk bagian paling atas halaman dimuat seawal mungkin.
+### C. FCP & Render-Blocking (Target: FCP < 1.8s)
+- Pasang `preconnect` dan `dns-prefetch` untuk domain pihak ketiga (Google Fonts, CDN).
+- Pastikan Critical CSS untuk komponen viewport atas di-inline atau dimuat tanpa memblokir parsing HTML.
 
 ### D. Accessibility / A11y (Target: > 95 dari saat ini 89)
 - Gelapkan teks sekunder/abu-abu pudar agar rasio kontras terhadap latar belakang memenuhi standar WCAG AA (minimal 4.5:1).
