@@ -36,9 +36,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://wa.me" crossorigin />
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
   <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
   <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="https://wa.me" />
+  <link rel="dns-prefetch" href="https://api.whatsapp.com" />
 
   <!-- Google Fonts Optimized (display=swap & non-render-blocking) -->
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
@@ -63,10 +66,10 @@
       --clr-white: #ffffff;
       --clr-off-white: #f8f7f4;
       --clr-light: #f1efe9;
-      --clr-muted: #68687a;
+      --clr-muted: #525260;
       --clr-border: #e8e5de;
       --clr-text: #2d2d3a;
-      --clr-text-light: #5a5a6e;
+      --clr-text-light: #4a4a5c;
       --clr-success: #2d8a4e;
       --clr-wa-green: #25d366;
       --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -326,17 +329,23 @@
   <link rel="preload" as="style" href="assets/css/style.css" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="assets/css/style.css" /></noscript>
 
-  <!-- JSON-LD Structured Data -->
+  <!-- JSON-LD Structured Data (Schema.org ProfessionalService + WebMCP Actions) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "ProfessionalService",
+        "@type": ["ProfessionalService", "HomeAndConstructionBusiness"],
         "@id": "https://jasaarsitekrumah.web.id/#organization",
         "name": "GM Architect",
+        "alternateName": "Jasa Arsitek Rumah GM Architect",
         "url": "https://jasaarsitekrumah.web.id",
-        "logo": "https://jasaarsitekrumah.web.id/assets/img/logo-arsitek-rumah.webp",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://jasaarsitekrumah.web.id/assets/img/logo-arsitek-rumah.webp",
+          "width": 40,
+          "height": 40
+        },
         "image": "https://jasaarsitekrumah.web.id/assets/img/hero-jasa-arsitek-rumah.webp",
         "priceRange": "$$",
         "address": {
@@ -347,6 +356,11 @@
           "postalCode": "12730",
           "addressCountry": "ID"
         },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "-6.2607",
+          "longitude": "106.8116"
+        },
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
@@ -355,7 +369,7 @@
             "closes": "18:00"
           }
         ],
-        "description": "GM Architect adalah jasa arsitek rumah profesional melayani desain rumah minimalis, modern, tropis, gambar kerja DED, 3D visualisasi, RAB, desain interior, renovasi, dan pengawasan pembangunan.",
+        "description": "GM Architect adalah jasa arsitek rumah profesional melayani desain rumah minimalis, modern, tropis, gambar kerja DED, 3D visualisasi, RAB, desain interior, renovasi, dan pengawasan pembangunan. Konsultasi gratis via WhatsApp.",
         "telephone": "+6288989643555",
         "contactPoint": {
           "@type": "ContactPoint",
@@ -364,19 +378,54 @@
           "availableLanguage": "Indonesian",
           "contactOption": "TollFree"
         },
+        "potentialAction": [
+          {
+            "@type": "CommunicateAction",
+            "name": "Konsultasi Gratis via WhatsApp",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://wa.me/6288989643555?text=Halo%2C%20saya%20ingin%20konsultasi%20mengenai%20jasa%20arsitek%20rumah",
+              "actionPlatform": ["https://schema.org/DesktopWebPlatform", "https://schema.org/MobileWebPlatform"]
+            },
+            "description": "Hubungi tim GM Architect via WhatsApp untuk konsultasi desain rumah secara gratis"
+          },
+          {
+            "@type": "ViewAction",
+            "name": "Lihat Galeri Portofolio Desain Rumah",
+            "target": "https://jasaarsitekrumah.web.id/galeri"
+          }
+        ],
         "areaServed": {
           "@type": "Country",
           "name": "Indonesia"
         },
-        "serviceType": ["Desain Arsitektur", "Desain Interior", "Gambar Kerja", "Visualisasi 3D", "Renovasi Rumah", "RAB", "Pengawasan Pembangunan"],
+        "serviceType": ["Desain Arsitektur", "Desain Interior", "Gambar Kerja DED", "Visualisasi 3D", "Renovasi Rumah", "RAB Estimasi Biaya", "Pengawasan Pembangunan"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Layanan Arsitektur & Desain Rumah",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Desain Arsitektur Rumah", "url": "https://jasaarsitekrumah.web.id/layanan/desain-arsitektur-rumah"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Desain Interior", "url": "https://jasaarsitekrumah.web.id/layanan/desain-interior"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Visualisasi 3D", "url": "https://jasaarsitekrumah.web.id/layanan/visualisasi-3d"}}
+          ]
+        },
         "sameAs": ["https://wa.me/6288989643555"]
       },
       {
         "@type": "WebSite",
         "@id": "https://jasaarsitekrumah.web.id/#website",
         "url": "https://jasaarsitekrumah.web.id",
-        "name": "GM Architect",
-        "publisher": { "@id": "https://jasaarsitekrumah.web.id/#organization" }
+        "name": "GM Architect - Jasa Arsitek Rumah Profesional",
+        "description": "Layanan jasa arsitek rumah profesional: desain rumah minimalis, modern, tropis, gambar kerja DED, 3D visualisasi, RAB, dan pengawasan pembangunan.",
+        "publisher": { "@id": "https://jasaarsitekrumah.web.id/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://jasaarsitekrumah.web.id/galeri?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
       },
       {
         "@type": "FAQPage",
@@ -555,7 +604,7 @@
     </div>
   </nav>
 
-  <main id="main-content">
+  <main id="main-content" role="main">
 
     <!-- ===================== HERO ===================== -->
     <section id="hero" aria-labelledby="heroTitle">
@@ -2178,62 +2227,33 @@
 
         <div class="row g-4">
 
+          <!-- Artikel 1: 24 September 2026 -->
           <div class="col-md-4 reveal" data-delay="0">
             <div class="electric-border-card">
               <div class="electric-border-glow"></div>
               <div class="electric-border-beam"></div>
-              <article class="electric-card-inner" itemscope itemtype="https://schema.org/BlogPosting">
+              <article class="electric-card-inner" itemscope itemtype="https://schema.org/BlogPosting"
+                itemprop="datePublished" content="2026-09-24">
                 <div class="blog-img-wrap">
-                  <img src="assets/img/blog/7-Inspirasi-Desain-Rumah-Minimalis-Modern-untuk-Lahan-Terbatas.webp"
-                    alt="7 Inspirasi Desain Rumah Minimalis Modern untuk Lahan Terbatas"
-                    width="400" height="225" loading="lazy" decoding="async" />
-                  <span class="blog-cat">Inspirasi Desain</span>
-                </div>
-                <div class="blog-body">
-                  <div class="blog-meta">
-                    <span><i class="bi bi-calendar3"></i> 20 Agustus 2026</span>
-                  </div>
-                  <h3 class="blog-title" itemprop="headline">
-                    <a href="blog/inspirasi-desain-rumah-minimalis-modern-lahan-terbatas.html">7 Inspirasi Desain Rumah
-                      Minimalis Modern untuk Lahan Terbatas</a>
-                  </h3>
-                  <p class="blog-excerpt" itemprop="description">
-                    Memiliki lahan sempit bukan berarti harus mengorbankan kenyamanan dan estetika. Simak 7 inspirasi
-                    desain rumah minimalis modern yang memaksimalkan setiap meter persegi lahan Anda.
-                  </p>
-                  <a href="blog/inspirasi-desain-rumah-minimalis-modern-lahan-terbatas.html" class="blog-link"
-                    aria-label="Baca selengkapnya artikel 7 Inspirasi Desain Rumah Minimalis Modern">
-                    Baca Selengkapnya <i class="bi bi-arrow-right"></i>
-                  </a>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <div class="col-md-4 reveal" data-delay="150">
-            <div class="electric-border-card">
-              <div class="electric-border-glow"></div>
-              <div class="electric-border-beam"></div>
-              <article class="electric-card-inner" itemscope itemtype="https://schema.org/BlogPosting">
-                <div class="blog-img-wrap">
-                  <img src="assets/img/blog/Mengapa-Gambar-Kerja-DED-Sangat-Penting-Sebelum-Membangun-Rumah.webp"
-                    alt="Mengapa Gambar Kerja DED Sangat Penting Sebelum Membangun Rumah?"
+                  <img src="assets/img/blog/24_september/mengenal-uji-sondir-tanah-sebelum-membangun-rumah.webp"
+                    alt="Mengenal Uji Sondir Tanah Sebelum Membangun Rumah - GM Architect"
                     width="400" height="225" loading="lazy" decoding="async" />
                   <span class="blog-cat">Tips Membangun</span>
                 </div>
                 <div class="blog-body">
                   <div class="blog-meta">
-                    <span><i class="bi bi-calendar3"></i> 15 Agustus 2026</span>
+                    <span><i class="bi bi-calendar3"></i> 24 September 2026</span>
                   </div>
                   <h3 class="blog-title" itemprop="headline">
-                    <a href="blog/mengapa-gambar-kerja-ded-sangat-penting-sebelum-membangun-rumah">Mengapa Gambar Kerja DED Sangat Penting Sebelum Membangun Rumah?</a>
+                    <a href="blog/mengenal-uji-sondir-tanah-sebelum-membangun-rumah.html">Mengenal Uji Sondir Tanah
+                      Sebelum Membangun Rumah</a>
                   </h3>
                   <p class="blog-excerpt" itemprop="description">
-                    Banyak pemilik rumah melewatkan tahap gambar kerja dan langsung membangun. Ketahui mengapa keputusan
-                    ini bisa berujung pada pembengkakan biaya dan pekerjaan ulang.
+                    Uji sondir tanah adalah langkah krusial sebelum konstruksi dimulai. Ketahui apa itu sondir,
+                    mengapa penting, dan bagaimana hasilnya mempengaruhi desain fondasi rumah Anda.
                   </p>
-                  <a href="blog/mengapa-gambar-kerja-ded-sangat-penting-sebelum-membangun-rumah" class="blog-link"
-                    aria-label="Baca selengkapnya artikel Mengapa Gambar Kerja DED Sangat Penting">
+                  <a href="blog/mengenal-uji-sondir-tanah-sebelum-membangun-rumah.html" class="blog-link"
+                    aria-label="Baca selengkapnya artikel Mengenal Uji Sondir Tanah Sebelum Membangun Rumah">
                     Baca Selengkapnya <i class="bi bi-arrow-right"></i>
                   </a>
                 </div>
@@ -2241,30 +2261,67 @@
             </div>
           </div>
 
+          <!-- Artikel 2: 23 September 2026 -->
+          <div class="col-md-4 reveal" data-delay="150">
+            <div class="electric-border-card">
+              <div class="electric-border-glow"></div>
+              <div class="electric-border-beam"></div>
+              <article class="electric-card-inner" itemscope itemtype="https://schema.org/BlogPosting"
+                itemprop="datePublished" content="2026-09-23">
+                <div class="blog-img-wrap">
+                  <img src="assets/img/blog/23_september/cara-menyusun-jadwal-renovasi-rumah-agar-tidak-molor.webp"
+                    alt="Cara Menyusun Jadwal Renovasi Rumah Agar Tidak Molor - GM Architect"
+                    width="400" height="225" loading="lazy" decoding="async" />
+                  <span class="blog-cat">Renovasi Rumah</span>
+                </div>
+                <div class="blog-body">
+                  <div class="blog-meta">
+                    <span><i class="bi bi-calendar3"></i> 23 September 2026</span>
+                  </div>
+                  <h3 class="blog-title" itemprop="headline">
+                    <a href="blog/cara-menyusun-jadwal-renovasi-rumah-agar-tidak-molor.html">Cara Menyusun Jadwal
+                      Renovasi Rumah Agar Tidak Molor</a>
+                  </h3>
+                  <p class="blog-excerpt" itemprop="description">
+                    Renovasi rumah sering kali molor dari jadwal karena perencanaan yang kurang matang. Pelajari
+                    cara menyusun timeline renovasi yang realistis dan efektif agar proyek selesai tepat waktu.
+                  </p>
+                  <a href="blog/cara-menyusun-jadwal-renovasi-rumah-agar-tidak-molor.html" class="blog-link"
+                    aria-label="Baca selengkapnya artikel Cara Menyusun Jadwal Renovasi Rumah Agar Tidak Molor">
+                    Baca Selengkapnya <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Artikel 3: 22 September 2026 -->
           <div class="col-md-4 reveal" data-delay="300">
             <div class="electric-border-card">
               <div class="electric-border-glow"></div>
               <div class="electric-border-beam"></div>
-              <article class="electric-card-inner" itemscope itemtype="https://schema.org/BlogPosting">
+              <article class="electric-card-inner" itemscope itemtype="https://schema.org/BlogPosting"
+                itemprop="datePublished" content="2026-09-22">
                 <div class="blog-img-wrap">
-                  <img src="assets/img/blog/Manfaat-Visualisasi-3D-dalam-Proses-Desain-Rumah.webp"
-                    alt="Manfaat Visualisasi 3D dalam Proses Desain Rumah"
+                  <img src="assets/img/blog/22_september/7-ide-desain-teras-rumah-minimalis-yang-estetik.webp"
+                    alt="7 Ide Desain Teras Rumah Minimalis yang Estetik - GM Architect"
                     width="400" height="225" loading="lazy" decoding="async" />
-                  <span class="blog-cat">3D Visualisasi</span>
+                  <span class="blog-cat">Inspirasi Desain</span>
                 </div>
                 <div class="blog-body">
                   <div class="blog-meta">
-                    <span><i class="bi bi-calendar3"></i> 31 Agustus 2026</span>
+                    <span><i class="bi bi-calendar3"></i> 22 September 2026</span>
                   </div>
                   <h3 class="blog-title" itemprop="headline">
-                    <a href="blog/manfaat-visualisasi-3d-dalam-proses-desain-rumah">Manfaat Visualisasi 3D dalam Proses Desain Rumah</a>
+                    <a href="blog/7-ide-desain-teras-rumah-minimalis-yang-estetik.html">7 Ide Desain Teras Rumah
+                      Minimalis yang Estetik</a>
                   </h3>
                   <p class="blog-excerpt" itemprop="description">
-                    Visualisasi 3D bukan sekadar gambar cantik — ini adalah alat komunikasi paling efektif antara
-                    arsitek dan pemilik rumah. Pelajari manfaat lengkapnya di sini.
+                    Teras rumah adalah kesan pertama yang dilihat tamu. Temukan 7 ide desain teras rumah minimalis
+                    yang estetik dan fungsional untuk mempercantik tampilan depan hunian Anda.
                   </p>
-                  <a href="blog/manfaat-visualisasi-3d-dalam-proses-desain-rumah" class="blog-link"
-                    aria-label="Baca selengkapnya artikel Manfaat Visualisasi 3D dalam Proses Desain Rumah">
+                  <a href="blog/7-ide-desain-teras-rumah-minimalis-yang-estetik.html" class="blog-link"
+                    aria-label="Baca selengkapnya artikel 7 Ide Desain Teras Rumah Minimalis yang Estetik">
                     Baca Selengkapnya <i class="bi bi-arrow-right"></i>
                   </a>
                 </div>

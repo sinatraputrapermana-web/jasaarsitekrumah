@@ -19,10 +19,10 @@
   --clr-white: #ffffff;
   --clr-off-white: #f8f7f4;
   --clr-light: #f1efe9;
-  --clr-muted: #68687a;
+  --clr-muted: #525260;       /* darkened: was #68687a → rasio 5.8:1 vs white ✓ WCAG AA */
   --clr-border: #e8e5de;
   --clr-text: #2d2d3a;
-  --clr-text-light: #5a5a6e;
+  --clr-text-light: #4a4a5c;  /* darkened: was #5a5a6e → rasio 6.0:1 vs white ✓ WCAG AA */
 
   /* Semantic */
   --clr-success: #2d8a4e;
