@@ -93,7 +93,7 @@
   <!-- ========================================== -->
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
@@ -101,6 +101,18 @@
   <!-- ========================================== -->
   <!-- 5. Artikel Blog (Terbaru ke Terlama)       -->
   <!-- ========================================== -->
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/mengenal-konsep-rumah-tumbuh-dan-cara-merencanakannya</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/5-kesalahan-umum-saat-membangun-rumah-tanpa-perencanaan</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/cara-memahami-kontrak-kerja-dengan-kontraktor-sebelum-tanda-tangan</loc>
     <lastmod>2026-09-28</lastmod>
