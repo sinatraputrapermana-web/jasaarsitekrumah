@@ -93,7 +93,7 @@
   <!-- ========================================== -->
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
@@ -101,6 +101,18 @@
   <!-- ========================================== -->
   <!-- 5. Artikel Blog (Terbaru ke Terlama)       -->
   <!-- ========================================== -->
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/jasa-renovasi-pagar-dan-carport-rumah-tampil-baru-lebih-aman</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/cara-menghitung-kebutuhan-titik-lampu-untuk-rumah-tinggal</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/inspirasi-desain-rumah-minimalis-2-kamar-untuk-pasangan-muda</loc>
     <lastmod>2026-09-30</lastmod>
