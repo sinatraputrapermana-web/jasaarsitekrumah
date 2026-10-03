@@ -93,7 +93,7 @@
   <!-- ========================================== -->
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
@@ -101,6 +101,18 @@
   <!-- ========================================== -->
   <!-- 5. Artikel Blog (Terbaru ke Terlama)       -->
   <!-- ========================================== -->
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/cara-mengatur-cash-flow-agar-dana-bangun-rumah-tidak-jebol</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaarsitekrumah.web.id/blog/5-ide-desain-balkon-rumah-minimalis-yang-nyaman</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://jasaarsitekrumah.web.id/blog/jasa-renovasi-pagar-dan-carport-rumah-tampil-baru-lebih-aman</loc>
     <lastmod>2026-10-02</lastmod>
